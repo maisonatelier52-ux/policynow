@@ -1,0 +1,20 @@
+<!--  -->
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<sitemap>
+<loc>https://www.policynow.org/sitemap-pages.xml</loc>
+<lastmod>2026-01-14</lastmod>
+</sitemap>
+<sitemap>
+<loc>https://www.policynow.org/sitemap-articles.xml</loc>
+<lastmod>2026-01-14</lastmod>
+</sitemap>
+<!-- <sitemap>
+<loc>https://www.policynow.org/sitemap-entity.xml</loc>
+<lastmod>2026-01-14</lastmod>
+</sitemap> -->
+<sitemap>
+<loc>https://www.policynow.org/sitemap-news.xml</loc>
+<lastmod>2026-01-14</lastmod>
+</sitemap>
+</sitemapindex>
+<!--  -->
