@@ -71,7 +71,7 @@ body.dark-mode .footer-links a{
 }
 
 .top-bar {
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 5px 7rem;
