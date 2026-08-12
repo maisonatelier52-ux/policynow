@@ -71,7 +71,7 @@ body.dark-mode .footer-links a{
 }
 
 .top-bar {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-between;
     padding: 5px 7rem;
@@ -3245,7 +3245,7 @@ body.light-mode .social-icon {
 }
     .top-left {
         display: flex;
-        justify-content:left;
+        /* justify-content:left; */
         width: 100%;
     }
 }
