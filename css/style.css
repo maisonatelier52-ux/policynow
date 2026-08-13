@@ -1426,7 +1426,7 @@ body.dark-mode .writers-title {
 
 #darkModeToggle,
 body.dark-mode .footer-brand-title .menu-toggle img {
-    filter: invert(1) !important
+    filter: invert(0) !important
 }
 
 
