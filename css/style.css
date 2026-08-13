@@ -169,7 +169,7 @@ nav a {
     top: -70px;
     background: #fff;
     z-index: 1000;
-    padding: 14px 20px;
+    padding: 14px 20px 50px;
     transition: top .6s ease-in-out
 }
 
@@ -1658,9 +1658,9 @@ body.light-mode .social-icon {
 
 .business-header h1 {
         text-transform: uppercase;
-    font-size: 35px;
+    font-size: 25px;
     font-weight: 600;
-    margin: 20px 0 0;
+    margin: 70px 0 0;
 }
 
 .business-header p {
@@ -3247,7 +3247,7 @@ body.light-mode .social-icon {
     display: flex;
 }
   .top-bar {
-        padding: 20px 20px 0px;
+        padding: 20px 20px 30px;
     }
     .top-left {
         display: flex;
