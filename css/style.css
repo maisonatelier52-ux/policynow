@@ -3248,6 +3248,9 @@ body.light-mode .social-icon {
         /* justify-content:left; */
         width: 100%;
     }
+    .footer-wrapper {
+    padding: 0px 20px;
+}
 }
 
 body.dark-mode .top-center img {

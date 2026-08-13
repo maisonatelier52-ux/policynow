@@ -83,10 +83,10 @@ traditional gesture of respect.",
     --mono: "IBM Plex Mono", "Courier New", monospace;
   }
   .footer-wrapper {
-    padding: 0px 80px;
+    padding: 0px 20px;
   }
 
-  *{ box-sizing: border-box; margin:0; padding:0; }
+  *{ box-sizing: border-box; margin:0; padding:0; overflow-x: hidden; }
 
   body{
     background: var(--bg);
@@ -319,13 +319,13 @@ traditional gesture of respect.",
   }
   article h2 .num{
     font-family: var(--sans);
-    font-size: 13px;
+    font-size: 10px;
     font-weight: 600;
     letter-spacing: 1px;
     color: var(--accent-bright);
     border: 1px solid var(--line);
-    border-radius: 20px;
-    padding: 4px 10px;
+    border-radius: 50px;
+    padding: 4px 5px;
     flex-shrink: 0;
   }
 
@@ -649,19 +649,52 @@ traditional gesture of respect.",
   }
 
   @media (max-width: 560px){
-    .hero{ padding: 28px 18px 0; }
-    .hero-caption{ margin: -40px 8px 0; padding: 22px 18px 20px; }
-    .byline-row{ padding: 0 18px 32px; }
+    .hero{ padding: 28px 0px 0; }
+    .hero-caption{ margin: 0px 8px 0px; padding: 0px 15px 20px; }
+    .byline-row{ padding: 0px 25px 32px; margin: 0px auto 0px; }
     .layout{ padding: 32px 18px 70px; }
     h1.headline{ font-size: 24px; }
-    .dek{ font-size: 15px; }
+    .dek{ font-size: 14px; }
     .byline-row{ flex-direction: column; align-items:flex-start; }
-    article h2{ font-size: 20px; flex-wrap: wrap; }
-    blockquote{ padding: 22px 20px; font-size: 18px; }
+    article h2{ font-size: 20px;font-weight: 500;
+    margin: 0px 0px 10px;
+    scroll-margin-top: 40px;
+    color: var(--text);
+    display: flex;
+    align-items: baseline;
+    gap: 10px;  }
+    blockquote{ padding: 22px 20px; font-size: 15px; }
     .bio-card{ grid-template-columns: 1fr; text-align:center; }
     .bio-card .photo{ max-width: 140px; margin: 0 auto; }
-    .author-footer{ grid-template-columns: 1fr; text-align:center; }
-    .author-footer .avatar{ margin: 0 auto; }
+    .author-footer{ grid-template-columns: 1fr; text-align:center; gap:0px;}
+    .author-footer .avatar{ margin: 0 auto;  }
+    .hero-plate {
+    position: relative;
+    border: 0px solid var(--line);
+    
+}
+.figure {
+    margin: 34px 0 10px;
+}
+.hero-photo img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+.author-footer .avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: 0px solid var(--line);
+}
+.about-label{
+  display: none;
+}
+article p {
+    font-size: 14px;
+    color: var(--text-dim);
+    margin-bottom: 10px;
+}
   }
 </style>
 </head>
@@ -1021,7 +1054,7 @@ a man bowing before the spiritual leader of the worldwide Catholic Church.
         <span class="avatar"><img src="../image/maxine-t-warne.jpg" alt="maxine"></span>
         <div>
           <div class="about-label">About the Author</div>
-          <strong>Maxine T. Warne</strong>
+          <strong><a href="../author">Maxine T. Warne</a></strong>
          
           <p>Maxine T. Warne is a staff writer at Policy Now, covering national developments and emerging trends shaping public policy and governance across the United States.</p>
         </div>
