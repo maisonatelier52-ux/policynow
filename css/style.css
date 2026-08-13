@@ -3243,6 +3243,9 @@ body.light-mode .social-icon {
     .top-bar .menu-togg{
     display: flex;
 }
+  .top-bar {
+        padding: 20px 20px 0px;
+    }
     .top-left {
         display: flex;
         /* justify-content:left; */
