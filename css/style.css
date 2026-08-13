@@ -75,7 +75,7 @@ body.dark-mode .footer-links a{
     align-items: center;
     justify-content: space-between;
     padding: 5px 7rem;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 0px solid #ddd;
 }
 
 .mobile-top-left,
@@ -2837,7 +2837,7 @@ body.light-mode .social-icon {
     }
 
     .top-left {
-        display: flex
+        display: none;
     }
 
     .sidebar {
