@@ -130,7 +130,7 @@ body.light-mode .main-nav {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    margin: 30px 0
+    margin: 30px 30px;
 }
 
 .day {
@@ -1159,7 +1159,7 @@ body.dark-mode .writers-title {
 .mobile-top-left,
 .share-single,
 .top-left {
-    display: none
+    display: none;
 }
 
 .author-image {
@@ -1334,7 +1334,8 @@ body.dark-mode .writers-title {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 25px;
-    margin-top: 2rem
+    margin-top: 2rem;
+    padding:0px 100px;
 }
 
 .footer-brand-title img {
@@ -1421,12 +1422,13 @@ body.dark-mode .writers-title {
 
 .live-sect,
 .mobile-top-left {
-    display: flex
+    display: flex;
 }
 
 #darkModeToggle,
 body.dark-mode .footer-brand-title .menu-toggle img {
-    filter: invert(0) !important
+    filter: invert(0) !important;
+    display:none;
 }
 
 
@@ -2757,7 +2759,8 @@ body.light-mode .social-icon {
     .latest-blog-grid,
     .news-wrapper,
     .related-grid {
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
+        padding:0px;
     }
 
     .img-section,
@@ -3248,7 +3251,8 @@ body.light-mode .social-icon {
     }
     .top-left {
         display: flex;
-        /* justify-content:left; */
+        justify-content:left;
+        gap: 50px;
         width: 100%;
     }
     .footer-wrapper {
