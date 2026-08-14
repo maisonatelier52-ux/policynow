@@ -169,7 +169,7 @@ nav a {
     top: -70px;
     background: #fff;
     z-index: 1000;
-    padding: 14px 20px 50px;
+    padding: 14px 20px 10px;
     transition: top .6s ease-in-out
 }
 
@@ -1315,8 +1315,9 @@ body.dark-mode .writers-title {
 
 .thumb-visual {
     width: 100%;
-    height: 127px;
-    display: block
+    height: 150px;
+    display: block;
+    object-fit: cover;
 }
 
 .story-link-wrap a {
@@ -3087,7 +3088,7 @@ body.light-mode .social-icon {
     }
 
     .main-heading a {
-        font-size: 2rem
+        font-size: 1.5rem
     }
 
     .news-center {
