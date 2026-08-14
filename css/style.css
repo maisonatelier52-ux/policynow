@@ -74,8 +74,9 @@ body.dark-mode .footer-links a{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5px 7rem;
-    border-bottom: 0px solid #ddd;
+    padding: 10px 7rem;
+    border-bottom: 1px solid #ddd;
+    background-color: black;
 }
 
 .mobile-top-left,
@@ -103,7 +104,7 @@ body.dark-mode .footer-links a{
 
 .login-btn,
 body.light-mode .main-nav {
-    background-color: #fff
+    background-color: black;
 }
 
 .subscribe-btn {
@@ -130,7 +131,7 @@ body.light-mode .main-nav {
     justify-content: space-between;
     align-items: center;
     position: relative;
-    margin: 30px 30px;
+    margin: 25px 0px;
 }
 
 .day {
@@ -147,13 +148,13 @@ nav {
 
 
 nav {
-    padding: 14px;
+    padding: 10px;
     font-size: 14px;
     justify-content: center
 }
 
 .main-container {
-    margin: 0 7rem
+    margin: 0 3rem
 }
 
 nav a {
@@ -161,7 +162,12 @@ nav a {
 }
 
 .main-nav1 {
-    gap: 40px
+    gap: 40px;
+    background-color: black;
+    
+}
+.main-nav1 a{
+    color: white;
 }
 
 .main-nav {
@@ -188,7 +194,7 @@ nav a {
 .news-row {
     display: grid;
     gap: 18px;
-    padding: 17px 0;
+    padding: 20px 0;
     grid-template-columns: repeat(4, 1fr);
     border-bottom: 1px solid
 }
@@ -1034,7 +1040,7 @@ body.dark-mode .feed-text h3 a,
 body.dark-mode .lead-article h3 a,
 body.dark-mode .live-indicator span,
 body.dark-mode .mid-story h4 a,
-body.dark-mode .nav-H,
+body.dark-mode .nav-l,
 body.dark-mode .news-item a,
 body.dark-mode .side-box ul li a,
 body.dark-mode .side-item h5 a,
@@ -1046,6 +1052,14 @@ body.dark-mode .writers-title {
 .menu-toggle,
 .search-icon {
     filter: invert(0);
+}
+.top-right a{
+    border:1px solid black;
+    border-radius: 100%;
+    padding: 8px 8px;
+    display: flex;
+    align-items: center;
+    
 }
 
 .wrapper-grid {
@@ -1615,7 +1629,7 @@ body.light-mode .live-indicator span,
 body.light-mode .main-heading a,
 body.light-mode .main-title-link,
 body.light-mode .meta-tags-line,
-body.light-mode .nav-H,
+body.light-mode .nav-l,
 body.light-mode .news-carousel-title,
 body.light-mode .news-center-title,
 body.light-mode .news-item a,
@@ -1632,7 +1646,7 @@ body.light-mode .top-right button {
 }
 
 body.light-mode .nav-l {
-    color: #000000;
+    color: white;
 }
 
 body.light-mode .sidebar.active {
@@ -1731,7 +1745,9 @@ body.light-mode .social-icon {
     width: 100%;
     height: 140px;
     display: block;
-    margin-bottom: 8px
+    margin-bottom: 8px;
+    object-fit: cover;
+    
 }
 
 .mid-story h4 a {
@@ -2837,7 +2853,7 @@ body.light-mode .social-icon {
 
 @media (min-width:992px) {
     .mobile-top-left {
-        display: none
+        display: none;
     }
 
     .top-left {
@@ -3249,18 +3265,37 @@ body.light-mode .social-icon {
 }
   .top-bar {
         padding: 20px 20px 30px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
     }
     .top-left {
         display: flex;
         justify-content:left;
         gap: 50px;
         width: 100%;
+        
     }
     .footer-wrapper {
     padding: 0px 20px;
 }
+
 }
 
 body.dark-mode .top-center img {
     filter: invert(100%) !important
+}
+.mobile-date-row {
+    display: none;
+}
+
+@media (max-width: 992px) {
+    .mobile-date-row {
+        display: block;
+        text-align: center;
+        font-size: 14px;
+        color: #8a5a2a;   /* the brownish-orange tone in your screenshot */
+        padding: 6px 0 0px;
+      
+    }
 }

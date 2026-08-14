@@ -202,3 +202,9 @@ if (track && items.length > 0 && prevBtn && nextBtn) {
                 if (Math.random() > 0.3) p.remove();
             });
         }
+// 
+document.addEventListener('DOMContentLoaded', () => {
+  const dayText = document.querySelector('.day')?.textContent.trim();
+  const mobileDate = document.querySelector('.mobile-date-row');
+  if (dayText && mobileDate) mobileDate.textContent = dayText;
+});
