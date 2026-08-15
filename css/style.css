@@ -3392,12 +3392,10 @@ body.dark-mode .top-center img {
             border-right: none;
         }
 @media (max-width:480px) {
-.header-ticker-item a {
-   font-size: 10.6px;
+.header-ticker-content .header-ticker-item a {
+   font-size: 9px;
 }
-.header-ticker-item:last-child a{
-    font-size: 10.6px;
-}
+
 
 
 }
