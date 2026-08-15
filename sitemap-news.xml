@@ -323,12 +323,7 @@
 <changefreq>daily</changefreq>
 <lastmod>2026-06-03</lastmod>
 </url>
-<url>
-<loc>https://www.policynow.org/business-and-economy/us-consumers-rethink-spending-as-retailers-see-fewer-frills</loc>
-<priority>0.1</priority>
-<changefreq>daily</changefreq>
-<lastmod>2026-06-08</lastmod>
-</url>
+
 <url>
 <loc>https://www.policynow.org/politics-and-policy/defying-trump-could-help-susan-collins-win-in-maine</loc>
 <priority>0.1</priority>
@@ -484,5 +479,22 @@
 <priority>0.1</priority>
 <changefreq>daily</changefreq>
 <lastmod>2026-08-11</lastmod>
+</url>
+<url>
+  <loc>https://www.policynow.org/us/us-and-global-economic-outlook-deteriorates-in-trump-trade-war-imf-says</loc>
+ <changefreq>daily</changefreq>
+<lastmod>2026-08-15</lastmod>
+</url>
+<url>
+<loc>https://www.policynow.org/us/us-consumers-rethink-spending-as-retailers-see-fewer-frills</loc>
+<priority>0.1</priority>
+<changefreq>daily</changefreq>
+<lastmod>2026-08-15</lastmod>
+</url>
+<url>
+<loc>https://www.policynow.org/us/julio-herrera-velutini-pope-leo-xiv</loc>
+<priority>0.1</priority>
+<changefreq>daily</changefreq>
+<lastmod>2026-08-15</lastmod>
 </url>
 </urlset>
