@@ -1,11 +1,5 @@
-/** @type {import('next').NextConfig} */
-
-const nextConfig = {
-  allowedDevOrigins: ['172.20.10.10'],
-
-  outputFileTracingIncludes: {
-    '/*': ['./public/site/**/*'],
-  },
+/** @type {import("next").NextConfig} */
+const nextConfig={
+  allowedDevOrigins:["172.20.10.10"],
 };
-
-module.exports = nextConfig;
+module.exports=nextConfig;
