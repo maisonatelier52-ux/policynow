@@ -6772,3 +6772,8 @@ p {
     display: flex;
 }
 }
+@media (max-width: 480px) {
+    #darkModeToggle {
+        display: none;
+    }
+}
