@@ -1,5 +1,5 @@
-import { getPage } from "../../data/site";
-import HtmlPage from "../../components/HtmlPage";
-import { notFound } from "next/navigation";
-export default function Page(){const page=getPage("/our-team");if(!page) notFound();return <HtmlPage page={page}/>;}
-export function generateMetadata(){const page=getPage("/our-team");return page?{title:page.title,description:page.description}:{};}
+import PageRenderer from "../../components/PageRenderer";
+import pages from "../../public/data/static-pages.json";
+
+export const metadata = { title: pages["/our-team"]?.title || "PolicyNow", description: pages["/our-team"]?.description || "" };
+export default function Page(){ const page=pages["/our-team"]; return <PageRenderer page={page} />; }

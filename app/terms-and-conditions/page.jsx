@@ -1,5 +1,5 @@
-import { getPage } from "../../data/site";
-import HtmlPage from "../../components/HtmlPage";
-import { notFound } from "next/navigation";
-export default function Page(){const page=getPage("/terms-and-conditions");if(!page) notFound();return <HtmlPage page={page}/>;}
-export function generateMetadata(){const page=getPage("/terms-and-conditions");return page?{title:page.title,description:page.description}:{};}
+import PageRenderer from "../../components/PageRenderer";
+import pages from "../../public/data/static-pages.json";
+
+export const metadata = { title: pages["/terms-and-conditions"]?.title || "PolicyNow", description: pages["/terms-and-conditions"]?.description || "" };
+export default function Page(){ const page=pages["/terms-and-conditions"]; return <PageRenderer page={page} />; }

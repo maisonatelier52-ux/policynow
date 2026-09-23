@@ -1,18 +1,13 @@
-# PolicyNow — Pure Next.js Migration
+# PolicyNow — Pure Next.js
 
-This project uses the Next.js App Router. The old HTML files are not used at runtime and are not included.
+Migrated to a clean Next.js App Router structure based on the supplied OS-Intel reference architecture.
 
-## Routes
-- `/` — home
-- `/<category>` — category page
-- `/<category>/<slug>` — article page
-- `/author` — authors page
-- Root policy pages such as `/privacy-policy`, `/editorial-policy`, etc.
+- Content data: `public/data/*.json`
+- Dynamic category: `/[category]`
+- Dynamic article: `/[category]/[slug]`
+- Shared page chrome: `components/Header.jsx`, `components/Footer.jsx`
+- Shared renderer: `components/PageRenderer.jsx`
+- Site/page CSS: `app/globals.css`
+- Images: `public/images/`
 
-## Structure
-- `app/` — Next.js routes and global CSS
-- `components/` — React components
-- `data/pages.json` — migrated page content/data
-- `public/image/` — images/assets
-
-No `public/site`, no `.html` page files, and no catch-all `[[...slug]]` route are used.
+No `app/[[...slug]]` catch-all route and no `public/site/*.html` pages are used.

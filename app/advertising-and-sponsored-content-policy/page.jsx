@@ -1,5 +1,5 @@
-import { getPage } from "../../data/site";
-import HtmlPage from "../../components/HtmlPage";
-import { notFound } from "next/navigation";
-export default function Page(){const page=getPage("/advertising-and-sponsored-content-policy");if(!page) notFound();return <HtmlPage page={page}/>;}
-export function generateMetadata(){const page=getPage("/advertising-and-sponsored-content-policy");return page?{title:page.title,description:page.description}:{};}
+import PageRenderer from "../../components/PageRenderer";
+import pages from "../../public/data/static-pages.json";
+
+export const metadata = { title: pages["/advertising-and-sponsored-content-policy"]?.title || "PolicyNow", description: pages["/advertising-and-sponsored-content-policy"]?.description || "" };
+export default function Page(){ const page=pages["/advertising-and-sponsored-content-policy"]; return <PageRenderer page={page} />; }

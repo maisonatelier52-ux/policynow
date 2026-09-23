@@ -1,5 +1,5 @@
-import { getPage } from "../../data/site";
-import HtmlPage from "../../components/HtmlPage";
-import { notFound } from "next/navigation";
-export default function Page(){const page=getPage("/privacy-policy");if(!page) notFound();return <HtmlPage page={page}/>;}
-export function generateMetadata(){const page=getPage("/privacy-policy");return page?{title:page.title,description:page.description}:{};}
+import PageRenderer from "../../components/PageRenderer";
+import pages from "../../public/data/static-pages.json";
+
+export const metadata = { title: pages["/privacy-policy"]?.title || "PolicyNow", description: pages["/privacy-policy"]?.description || "" };
+export default function Page(){ const page=pages["/privacy-policy"]; return <PageRenderer page={page} />; }
