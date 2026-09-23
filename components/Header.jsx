@@ -64,7 +64,7 @@ export default function Header() {
       </div>
 
       <div className="date-row">
-        <div className="day"><strong>Wednesday, October 23, 2026</strong></div>
+        <div className="day"><strong>Saturday, August 20, 2026</strong></div>
         <div className="top-center">
           <a href="https://www.policynow.org" title="PolicyNow home">
             <img alt="PolicyNow" src="/images/policynow-logo.png" />

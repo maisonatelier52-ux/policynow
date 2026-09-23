@@ -1,12 +1,22 @@
 import "./globals.css";
-import SiteEnhancements from "../components/SiteEnhancements";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "PolicyNow",
+  metadataBase: new URL("https://www.policynow.org/"),
+  title: { default: "PolicyNow", template: "%s | PolicyNow" },
   description: "Where Policy Meets Public Perception",
   verification: { google: "google590f22f1e6cb3e44" },
 };
 
 export default function RootLayout({ children }) {
-  return <html lang="en"><body className="light-mode">{children}<SiteEnhancements /></body></html>;
+  return (
+    <html lang="en">
+      <body className="light-mode">
+        <Header />
+        {children}
+        <Footer />
+      </body>
+    </html>
+  );
 }
