@@ -1,0 +1,17 @@
+# PolicyNow Apache rules
+Options -Indexes
+RewriteEngine On
+
+# Force HTTPS and www on Apache deployments.
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} !^www\.policynow\.org$ [NC]
+RewriteRule ^ https://www.policynow.org%{REQUEST_URI} [R=301,L]
+
+# Leave existing files/directories untouched.
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# If PolicyNow is running behind Apache as a reverse proxy, pass the request
+# to the Next.js server. Adjust the port if your production process uses one.
+RewriteRule ^(.*)$ http://127.0.0.1:3000/$1 [P,L]
