@@ -27,7 +27,7 @@ export default async function CategoryPage({ params }) {
   if (!label) notFound();
 
   const list = articles
-    .filter((a) => a.category === category && !a.special)
+    .filter((a) => a.category === category)
     .sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0));
 
   const lead = list[0];
