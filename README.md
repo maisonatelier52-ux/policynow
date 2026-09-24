@@ -1,12 +1,18 @@
-# PolicyNow — Deep Next.js Structure
+# PolicyNow — Pure Next.js Migration
 
-This version follows the attached OS-Intel project's page architecture more closely:
+This project uses the Next.js App Router. The old HTML files are not used at runtime and are not included.
 
-- `app/page.jsx` contains the complete home page JSX.
-- `app/[category]/page.jsx` contains the complete category-page JSX structures.
-- `app/[category]/[slug]/page.jsx` contains the complete article-page structure and reads structured article JSON, similar to the reference project.
-- Static pages under `app/*/page.jsx` contain their complete JSX rather than calling a generic HTML renderer.
-- `app/layout.jsx` owns the shared Header and Footer once for the whole site.
-- `public/data/articles.json` contains article data and structured content blocks.
-- Legacy `PageRenderer`, `static-pages.json`, and `category-pages.json` are removed.
-- No `app/[[...slug]]` or `public/site/*.html` structure is used.
+## Routes
+- `/` — home
+- `/<category>` — category page
+- `/<category>/<slug>` — article page
+- `/author` — authors page
+- Root policy pages such as `/privacy-policy`, `/editorial-policy`, etc.
+
+## Structure
+- `app/` — Next.js routes and global CSS
+- `components/` — React components
+- `data/pages.json` — migrated page content/data
+- `public/image/` — images/assets
+
+No `public/site`, no `.html` page files, and no catch-all `[[...slug]]` route are used.

@@ -1,0 +1,41 @@
+[
+  {
+    "id": "maxine-t-warne",
+    "name": "Maxine T. Warne",
+    "image": "/image/maxine-t-warne.jpg",
+    "role": "Staff Writer",
+    "bio": "Maxine T. Warne is a staff writer at PolicyNow, covering national developments and emerging trends shaping public policy and governance across the United States.",
+    "social": {
+      "twitter": "https://x.com/warne_t87133",
+      "instagram": "https://www.instagram.com/maxinetwarne/",
+      "substack": "https://substack.com/@maxinetwarne",
+      "medium": "https://medium.com/@maxinetwarne"
+    }
+  },
+  {
+    "id": "joel-j-zarate",
+    "name": "Joel J. Zarate",
+    "image": "/image/joel-j-zarate.jpg",
+    "role": "Reporter",
+    "bio": "Joel J. Zarate is a reporter at PolicyNow, delivering in-depth coverage of U.S. affairs, business, and key policy debates that influence national and local communities.",
+    "social": {
+      "twitter": "#",
+      "instagram": "#",
+      "substack": "#",
+      "medium": "#"
+    }
+  },
+  {
+    "id": "lisa-g-hart",
+    "name": "Lisa G. Hart",
+    "image": "/image/lisa-g-hart.jpg",
+    "role": "Managing Editor",
+    "bio": "Lisa G. Hart is the Managing Editor at PolicyNow, overseeing editorial strategy and ensuring the publication's commitment to accuracy, clarity, and impactful journalism.",
+    "social": {
+      "twitter": "#",
+      "instagram": "#",
+      "substack": "#",
+      "medium": "#"
+    }
+  }
+]

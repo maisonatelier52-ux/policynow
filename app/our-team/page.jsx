@@ -1,104 +1,85 @@
-export const metadata = {
-  title: "Where Policy Meets Public Perception",
-  description: "Blending policy analysis, public perception, and strategic storytelling for policymakers, business leaders, and thought leaders.",
-  alternates: { canonical: `https://www.policynow.org/our-team` },
-};
+import Link from "next/link";
+import authors from "../../data/authors";
 
-export default function Page() {
+const DEPARTMENTS = [
+  { icon: "✎", title: "Editorial", text: "Guides newsroom standards and ensures quality, clarity, and editorial consistency." },
+  { icon: "✓", title: "Fact-Checking", text: "Verifies information, sources, and claims before publication." },
+  { icon: "📰", title: "Production", text: "Manages publishing workflows and maintains our digital news platform." },
+  { icon: "👥", title: "Audience & Community", text: "Engages with readers and supports meaningful community participation." },
+];
+
+export default function OurTeamPage() {
   return (
-    <>
-      <div className="about-wrapper">
-        <section className="our-team-page">
-          <div className="our-team-container">
-            <div className="our-team-header">
-              <div className="our-team-header-left">
-                <h1 className="our-team-title">Our Team</h1>
-                <p className="our-team-intro">
-                   At Policy Now, our journalists, editors, analysts, and researchers work together to produce accurate, independent, and public-interest journalism. We are committed to delivering reporting that is factual, transparent, and accountable to our readers. 
-                </p>
-              </div>
-              <div className="our-team-header-right">
-                <h4 className="our-team-mini-title">OUR MISSION</h4>
-                <p>
-                   Our mission is to inform the public through reliable, evidence-based reporting. We seek to explain complex issues, hold institutions accountable, and provide readers with journalism they can trust. 
-                </p>
-              </div>
-            </div>
-            <div className="our-team-section">
-              <div className="our-team-section-heading"> REPORTING TEAM </div>
-              <div className="our-team-divider"></div>
-              <div className="our-team-grid">
-                <div className="our-team-card">
-                  <img alt="Maxine T. Warne" className="our-team-photo" src="/images/maxine-t-warne.jpg" />
-                  <h3 className="our-team-name"> Maxine T. Warne </h3>
-                  <div className="our-team-role"> Staff Writer </div>
-                  <p className="our-team-description">
-                     Maxine covers government, public policy, elections, and civic affairs, with a focus on accountability, transparency, and their impact on communities. 
-                  </p>
-                  <a className="our-team-link" href="/author.php"> View full bio → </a>
-                </div>
-                <div className="our-team-card">
-                  <img alt="Joel J. Zarate" className="our-team-photo" src="/images/joel-j-zarate.jpg" />
-                  <h3 className="our-team-name"> Joel J. Zarate </h3>
-                  <div className="our-team-role"> Reporter </div>
-                  <p className="our-team-description">
-                     Joel specializes in investigative and enterprise reporting, examining issues that affect public institutions, policy, and community trust. 
-                  </p>
-                  <a className="our-team-link" href="/author.php"> View full bio → </a>
-                </div>
-                <div className="our-team-card">
-                  <img alt="Lisa G. Hart" className="our-team-photo" src="/images/lisa-g-hart.jpg" />
-                  <h3 className="our-team-name"> Lisa G. Hart </h3>
-                  <div className="our-team-role"> Managing Editor </div>
-                  <p className="our-team-description">
-                     Lisa oversees editorial standards, newsroom operations, and content review to ensure accuracy, fairness, and consistency across all coverage. 
-                  </p>
-                  <a className="our-team-link" href="/author.php"> View full bio → </a>
-                </div>
-              </div>
-            </div>
-            <div className="our-team-section">
-              <div className="our-team-section-heading"> POLICY NOW STAFF </div>
-              <div className="our-team-divider"></div>
-              <p className="our-team-staff-text">
-                 Behind every story is a dedicated team working across multiple departments to uphold editorial standards, maintain accuracy, and support the delivery of independent journalism. 
-              </p>
-              <div className="our-team-departments">
-                <div className="our-team-department">
-                  <div className="our-team-icon">✎</div>
-                  <h4>Editorial</h4>
-                  <p> Guides newsroom standards and ensures quality, clarity, and editorial consistency. </p>
-                </div>
-                <div className="our-team-department">
-                  <div className="our-team-icon">✓</div>
-                  <h4>Fact-Checking</h4>
-                  <p> Verifies information, sources, and claims before publication. </p>
-                </div>
-                <div className="our-team-department">
-                  <div className="our-team-icon">📰</div>
-                  <h4>Production</h4>
-                  <p> Manages publishing workflows and maintains our digital news platform. </p>
-                </div>
-                <div className="our-team-department">
-                  <div className="our-team-icon">👥</div>
-                  <h4>Audience & Community</h4>
-                  <p> Engages with readers and supports meaningful community participation. </p>
-                </div>
-              </div>
-            </div>
-            <div className="our-team-section">
-              <div className="our-team-section-heading"> ALL AUTHORS </div>
-              <div className="our-team-divider"></div>
-              <div className="our-team-tags">
-                <span className="our-team-tag"> Maxine T. Warne </span>
-                <span className="our-team-tag"> Joel J. Zarate </span>
-                <span className="our-team-tag"> Lisa G. Hart </span>
-              </div>
-            </div>
-            <div className="our-team-footer"> Last Updated: May 21, 2026 </div>
-          </div>
-        </section>
+    <div className="mx-auto max-w-[1080px] px-6 py-16 pb-24 font-sans">
+      <div className="mb-12 grid grid-cols-1 items-start gap-10 md:grid-cols-[1.4fr_1fr]">
+        <div>
+          <h1 className="mb-3.5 font-serif text-4xl">Our Team</h1>
+          <p className="text-base leading-relaxed text-[#4a4f57]">
+            At PolicyNow, our journalists, editors, analysts, and researchers work together to produce accurate,
+            independent, and public-interest journalism. We are committed to delivering reporting that is
+            factual, transparent, and accountable to our readers.
+          </p>
+        </div>
+        <div className="rounded-xl border border-[#ece9e4] bg-[#f8f7f5] p-5">
+          <h4 className="mb-2.5 text-[13px] tracking-wide text-[#b3261e]">OUR MISSION</h4>
+          <p className="text-base leading-relaxed text-[#4a4f57]">
+            Our mission is to inform the public through reliable, evidence-based reporting. We seek to explain
+            complex issues, hold institutions accountable, and provide readers with journalism they can trust.
+          </p>
+        </div>
       </div>
-    </>
+
+      <div className="mb-14">
+        <div className="mb-2 text-[13px] font-bold tracking-[0.1em] text-[#14181f]">REPORTING TEAM</div>
+        <div className="mb-6 h-[3px] w-11 rounded bg-[#b3261e]" />
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {authors.map((a) => (
+            <div className="rounded-xl border border-[#ece9e4] bg-[#f8f7f5] p-6 text-center" key={a.id}>
+              <img alt={a.name} className="mx-auto mb-3.5 h-[78px] w-[78px] rounded-full object-cover" src={a.image} />
+              <h3 className="mb-1 text-[17px]">{a.name}</h3>
+              <div className="mb-2.5 text-[12.5px] font-bold uppercase tracking-wide text-[#b3261e]">{a.role}</div>
+              <p className="mb-3 text-sm leading-relaxed text-[#4a4f57]">{a.bio}</p>
+              <Link href="/author" className="text-[13px] font-semibold text-[#14181f] hover:underline">
+                View full bio →
+              </Link>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="mb-14">
+        <div className="mb-2 text-[13px] font-bold tracking-[0.1em] text-[#14181f]">POLICYNOW STAFF</div>
+        <div className="mb-6 h-[3px] w-11 rounded bg-[#b3261e]" />
+        <p className="mb-6 text-base leading-relaxed text-[#33373d]">
+          Behind every story is a dedicated team working across multiple departments to uphold editorial
+          standards, maintain accuracy, and support the delivery of independent journalism.
+        </p>
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+          {DEPARTMENTS.map((d) => (
+            <div className="text-center" key={d.title}>
+              <div className="mb-2.5 text-2xl">{d.icon}</div>
+              <h4 className="mb-1.5 text-[15px]">{d.title}</h4>
+              <p className="text-[13.5px] text-[#6b7078]">{d.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div>
+        <div className="mb-2 text-[13px] font-bold tracking-[0.1em] text-[#14181f]">ALL AUTHORS</div>
+        <div className="mb-6 h-[3px] w-11 rounded bg-[#b3261e]" />
+        <div className="flex flex-wrap gap-2.5">
+          {authors.map((a) => (
+            <span className="rounded-full bg-[#14181f] px-3.5 py-1.5 text-[13px] text-white" key={a.id}>
+              {a.name}
+            </span>
+          ))}
+        </div>
+      </div>
+
+      <div className="mt-12 border-t border-gray-200 pt-6 text-center">
+        <div className="text-[13px] tracking-wide text-[#9a9fa6]">Last Updated: May 21, 2026</div>
+      </div>
+    </div>
   );
 }

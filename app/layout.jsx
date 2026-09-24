@@ -1,10 +1,9 @@
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export const metadata = {
-  metadataBase: new URL("https://www.policynow.org/"),
-  title: { default: "PolicyNow", template: "%s | PolicyNow" },
+  title: "PolicyNow",
   description: "Where Policy Meets Public Perception",
   verification: { google: "google590f22f1e6cb3e44" },
 };
@@ -12,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="light-mode">
+      <body className="bg-white text-[#14181f] font-sans antialiased">
         <Header />
         {children}
         <Footer />

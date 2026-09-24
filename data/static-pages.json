@@ -1,0 +1,588 @@
+{
+  "about-us": {
+    "title": "About Policy Now",
+    "intro": "Policy Now is an independent digital news organization committed to accurate, transparent, and accountable journalism. We are not owned or controlled by any corporation, political party, advocacy group, or government institution. Our editorial decisions are made independently by journalists and editors dedicated to serving the public interest.",
+    "sections": [
+      {
+        "heading": "Our Mission",
+        "paragraphs": [
+          "Our mission is to provide readers with reliable, fact-based reporting on the political, economic, technological, cultural, and social developments shaping the world. We strive to deliver journalism that prioritizes accuracy, context, and accountability while helping audiences better understand complex issues.",
+          "Our editorial work is guided by the following principles:"
+        ],
+        "items": [
+          {
+            "title": "Accuracy Before Speed",
+            "text": "We prioritize verification and factual accuracy over being first to publish. Every story is carefully reviewed to ensure it meets our editorial standards."
+          },
+          {
+            "title": "Transparency and Accountability",
+            "text": "We clearly identify sources whenever possible and provide corrections, clarifications, and updates when errors are discovered."
+          },
+          {
+            "title": "Editorial Independence",
+            "text": "Our reporting is free from corporate, political, or governmental influence. News judgments are made solely on the basis of public interest and journalistic merit."
+          }
+        ],
+        "list": []
+      },
+      {
+        "heading": "Who We Are",
+        "paragraphs": [
+          "Policy Now is produced by a distributed team of journalists, editors, researchers, and analysts with experience across digital and traditional media platforms.",
+          "Our newsroom operates remotely while maintaining consistent editorial standards, oversight, and fact-checking processes. This structure allows us to cover important stories efficiently while preserving accuracy, fairness, and editorial integrity."
+        ],
+        "items": [],
+        "list": []
+      },
+      {
+        "heading": "Editorial Standards",
+        "paragraphs": [
+          "Every article published by Policy Now undergoes editorial review before publication. We verify information through credible sources and apply established journalistic standards to our reporting.",
+          "When inaccuracies are identified, we issue corrections or clarifications promptly and transparently. Significant updates to published stories are clearly noted for readers."
+        ],
+        "items": [],
+        "list": []
+      },
+      {
+        "heading": "Our Commitment to Readers",
+        "paragraphs": [],
+        "items": [],
+        "list": [
+          "News reporting and opinion content are clearly distinguished and labeled.",
+          "We do not accept payment in exchange for favorable coverage or the suppression of news stories.",
+          "Corrections are published promptly and transparently when warranted.",
+          "Editorial decisions are made independently and without conflicts of interest.",
+          "Our reporting is guided by evidence, verification, and the public interest."
+        ]
+      }
+    ],
+    "footerTexts": [
+      "Policy Now is an independent digital news publication operated by a distributed editorial team based in the United States."
+    ],
+    "email": "✉ editorial@policynow.org",
+    "updated": "Last Updated: June 2026"
+  },
+  "advertising-and-sponsored-content-policy": {
+    "title": "Advertising and Sponsored Content Policy",
+    "intro": "Policy Now separates commercial material from editorial reporting and aims to label advertising, sponsorships, affiliate links, and other paid relationships clearly and conspicuously for readers.",
+    "sections": [
+      {
+        "heading": "Editorial separation",
+        "paragraphs": [
+          "Commercial relationships do not grant editorial control. Reporting decisions, headlines, editorial framing, source selection, and publication timing are not sold as part of an advertising, affiliate, sponsorship, or partnership arrangement.",
+          "Policy Now's standard is that journalism and advertising should remain distinguishable without guesswork. A reader should not have to infer whether content is paid for, promotional, or independently reported."
+        ],
+        "items": [],
+        "list": []
+      },
+      {
+        "heading": "How paid material is labeled",
+        "paragraphs": [
+          "When content is paid for, sponsored, or published because of a commercial arrangement, Policy Now expects that the disclosure appears in a clear location and uses language ordinary readers can understand before they mistake the material for independent reporting."
+        ],
+        "items": [],
+        "list": [
+          "Clear labels may include: Advertisement, Ad, Sponsored, Paid Content, or Sponsored Advertising Content.",
+          "The disclosure should appear close enough to the content that a reader sees it before or as they engage with the material.",
+          "Visual design, bylines, and page layout should not be used to make paid material look indistinguishable from independently reported journalism.",
+          "Vague labels that could confuse readers should be avoided if they do not make the commercial nature of the material obvious."
+        ]
+      },
+      {
+        "heading": "Native, branded, and partner content",
+        "paragraphs": [
+          "If Policy Now publishes sponsored features, branded content, partner-funded explainer material, or similarly designed promotional pages, those pages should carry a disclosure that is prominent, plain-language, and durable across desktop and mobile views.",
+          "A sponsor may buy placement or a clearly labeled promotional package, but a sponsor does not buy the right to masquerade as the newsroom, to receive a deceptive byline, or to alter unrelated reporting."
+        ],
+        "items": [],
+        "list": []
+      },
+      {
+        "heading": "Affiliate links, commerce, and material connections",
+        "paragraphs": [
+          "If Policy Now uses affiliate links, referral arrangements, or any other material connection that could result in compensation when a reader clicks or makes a purchase, that relationship should be disclosed clearly in or near the affected content.",
+          "Commerce-related disclosures should be written for readers, not buried in legal shorthand. The point is to let readers understand when a recommendation, link, or product mention could generate revenue."
+        ],
+        "items": [],
+        "list": [
+          "Affiliate or referral disclosures should be clear and concise.",
+          "A material connection should not be hidden only in a footer, general policy page, or terms page if it affects a specific piece of content.",
+          "Editorial recommendations should not be confused with compensation alone."
+        ]
+      },
+      {
+        "heading": "Newsletters, video, audio, and social distribution",
+        "paragraphs": [
+          "Disclosure standards apply across formats, not only article pages. Sponsored newsletter placements, paid podcast segments, video sponsorships, and social media promotions should also be labeled in a way that travels with the content or appears clearly at the point of exposure.",
+          "The format may change, but the reader-facing principle does not: paid communication should look paid, not editorially disguised."
+        ],
+        "items": [],
+        "list": []
+      },
+      {
+        "heading": "Practices Policy Now should not use",
+        "paragraphs": [],
+        "items": [],
+        "list": [
+          "Selling editorial conclusions or offering favorable coverage in exchange for payment or access.",
+          "Using a newsroom byline, headline style, or article layout to disguise paid material where the commercial nature is not obvious.",
+          "Allowing an advertiser, sponsor, or affiliate partner to control unrelated reporting.",
+          "Hiding a material connection in a place a normal reader would not reasonably notice."
+        ]
+      },
+      {
+        "heading": "Questions, complaints, and review requests",
+        "paragraphs": [
+          "Readers, advertisers, partners, and subjects may contact Policy Now if they believe commercial material was mislabeled or the boundary between advertising and editorial work was not clear enough.",
+          "When a disclosure problem is substantiated, the newsroom's expectation is that the label, placement, or page treatment is corrected promptly."
+        ],
+        "items": [],
+        "list": []
+      }
+    ],
+    "footerTexts": [],
+    "email": null,
+    "updated": null
+  },
+  "corrections-policy": {
+    "title": "Corrections Policy",
+    "intro": "Accuracy is fundamental to Policy Now's journalism. While we take great care to verify information before publication, errors can occur. When they do, we correct them promptly, transparently, and in a manner that is clear to our readers.",
+    "sections": [
+      {
+        "heading": "How We Handle Errors",
+        "paragraphs": [
+          "Different types of errors require different responses:"
+        ],
+        "items": [
+          {
+            "title": "✎ Minor Errors",
+            "text": "Spelling mistakes, grammatical errors, formatting issues, or typographical errors that do not affect the meaning of an article may be corrected without a formal correction note."
+          },
+          {
+            "title": "ⓘ Factual Errors",
+            "text": "Errors involving names, dates, figures, quotations, or other factual information are corrected as soon as they are identified. Significant factual corrections are accompanied by a clearly labeled editor's note explaining the nature of the correction."
+          },
+          {
+            "title": "↻ Developing Stories",
+            "text": "News articles covering ongoing events may be updated as new information becomes available and is verified. Material updates are time-stamped to indicate when changes were made."
+          }
+        ],
+        "list": []
+      },
+      {
+        "heading": "Where Corrections Appear",
+        "paragraphs": [
+          "Corrections are published directly within the affected article. We do not remove or conceal corrections by relocating them to separate pages.",
+          "Depending on the circumstances, Policy Now may publish a correction, clarification, update, or editor's note to ensure readers understand the nature of the change."
+        ],
+        "items": [],
+        "list": []
+      },
+      {
+        "heading": "What to Include in a Correction Request",
+        "paragraphs": [
+          "To help us review a correction request efficiently, please provide the article headline or URL, the specific statement, passage, or claim you believe is inaccurate, the factual basis for your concern, and any supporting evidence or documentation relevant to the issue."
+        ],
+        "items": [],
+        "list": []
+      },
+      {
+        "heading": "Reader Submissions",
+        "paragraphs": [
+          "Readers play an important role in maintaining the accuracy of our reporting. If you believe an article contains an error, please contact us with the article headline, URL, and a brief explanation of the issue.",
+          "Our editorial team reviews all correction requests promptly and carefully."
+        ],
+        "items": [],
+        "list": []
+      },
+      {
+        "heading": "Our Commitment to Transparency",
+        "paragraphs": [],
+        "items": [],
+        "list": [
+          "We do not correct significant errors without acknowledging the change.",
+          "Substantive corrections and updates are disclosed clearly to readers.",
+          "All correction requests are reviewed fairly, respectfully, and in good faith.",
+          "Corrections and updates are intended to improve accuracy and clarity, not to substantially alter the original meaning of published content."
+        ]
+      }
+    ],
+    "footerTexts": [],
+    "email": null,
+    "updated": null
+  },
+  "editorial-policy": {
+    "title": "Editorial Policy",
+    "intro": "Policy Now is an independent digital newsroom committed to accurate, fair, transparent, and accountable journalism. Our editorial standards are designed to ensure readers understand how our reporting is researched, reviewed, and published, and can trust the integrity of our journalism.",
+    "sections": [
+      {
+        "heading": "Editorial Independence",
+        "paragraphs": [
+          "Editorial decisions are made independently by our journalists and editors. We do not accept payment, favors, or influence in exchange for coverage. Advertising, sponsorship, business relationships, and external interests do not determine or control our reporting, editorial priorities, or news judgments."
+        ],
+        "items": [],
+        "list": []
+      },
+      {
+        "heading": "Accuracy and Verification",
+        "paragraphs": [
+          "Accuracy is a core newsroom principle. Our journalists seek to verify information through credible sources, documentary evidence, official records, and direct attribution whenever possible. When information cannot be independently verified, that limitation is disclosed clearly to readers.",
+          "Errors are corrected promptly and transparently in accordance with our Corrections Policy. Coverage involving legal, financial, public policy, or public safety matters may undergo additional editorial review prior to publication."
+        ],
+        "items": [],
+        "list": []
+      },
+      {
+        "heading": "Fairness and Balance",
+        "paragraphs": [
+          "We strive to present relevant perspectives on complex issues while providing appropriate context and evidence. Our reporting is guided by facts and verification, not by political, ideological, or commercial interests. We seek fairness without creating false equivalence between supported and unsupported claims."
+        ],
+        "items": [],
+        "list": []
+      },
+      {
+        "heading": "Transparency",
+        "paragraphs": [
+          "Readers deserve transparency regarding how reporting decisions are made. We are committed to the following practices:"
+        ],
+        "items": [],
+        "list": [
+          "Clearly distinguish between news reporting, opinion, analysis, and sponsored content.",
+          "Publish articles under an individual journalist's byline whenever practical.",
+          "Use a \"Policy Now Staff\" byline for collaborative newsroom reporting.",
+          "Clearly identify sponsored, paid, affiliate, or partner-funded content so it is not mistaken for independent editorial reporting."
+        ]
+      },
+      {
+        "heading": "Disclosure and Labeling",
+        "paragraphs": [
+          "We disclose material relationships that a reasonable reader would consider relevant to understanding a story or piece of content. Sponsored content, affiliate relationships, paid placements, and partner-funded material are clearly labeled and maintained separately from independent newsroom reporting."
+        ],
+        "items": [],
+        "list": []
+      },
+      {
+        "heading": "Ethical Standards",
+        "paragraphs": [],
+        "items": [
+          {
+            "title": "No Undisclosed Conflicts of Interest",
+            "text": "Journalists and contributors are expected to disclose personal, professional, or financial relationships that could reasonably create a conflict of interest."
+          },
+          {
+            "title": "No Hidden Sponsored Content",
+            "text": "Sponsored, branded, or paid content is clearly identified and kept separate from independent editorial reporting."
+          },
+          {
+            "title": "Respect for Privacy",
+            "text": "We balance the public's right to know with individual privacy interests and seek to report responsibly, accurately, and with respect for personal dignity."
+          }
+        ],
+        "list": []
+      },
+      {
+        "heading": "Reader Feedback and Accountability",
+        "paragraphs": [
+          "Accountability is essential to trustworthy journalism. We welcome feedback, corrections, questions, and concerns from readers and review submissions carefully as part of our commitment to accuracy and transparency."
+        ],
+        "items": [],
+        "list": []
+      }
+    ],
+    "footerTexts": [],
+    "email": null,
+    "updated": null
+  },
+  "legal": {
+    "title": "Legal",
+    "intro": "This page provides a plain language overview of legal and compliance topics relevant to Policy Now's publishing, reader use of site content, complaints, permissions, and formal requests.",
+    "sections": [
+      {
+        "heading": "Informational use of Policy Now content",
+        "paragraphs": [
+          "Policy Now publishes journalism, analysis, and explanatory material for informational purposes. Articles are edited to newsroom standards, but they should not be treated as legal, financial, tax, medical, or other professional advice tailored to an individual reader's situation.",
+          "Where a story touches legal, regulatory, or financial matters, Policy Now aims to use precise sourcing and bounded language rather than sweeping implication. Readers remain responsible for seeking professional advice when they need it."
+        ],
+        "items": [],
+        "list": []
+      },
+      {
+        "heading": "Copyright, quotation, and reuse",
+        "paragraphs": [
+          "Readers may link to Policy Now reporting and may quote brief excerpts with clear attribution where applicable by law or permissions. Republishing full articles, bulk reproduction, commercial reuse, scraping for republication, or systematic copying requires permission unless a separate license or legal exception applies.",
+          "If you wish to syndicate, reproduce, translate, archive commercially, or otherwise reuse substantial Policy Now content, contact the newsroom before doing so."
+        ],
+        "items": [],
+        "list": []
+      },
+      {
+        "heading": "Complaints about accuracy, rights, or fairness",
+        "paragraphs": [
+          "If you believe a Policy Now article contains a material factual error, omits critical context, infringes rights, or raises a serious legal concern, contact the newsroom promptly with the specific URL, the exact material at issue, the basis for your concern, and supporting documentation where available.",
+          "Different complaints may be handled under different newsroom processes. A factual dispute may be reviewed under the corrections or right of reply process, while a copyright, privacy, or other rights complaint may require separate review."
+        ],
+        "items": [],
+        "list": []
+      },
+      {
+        "heading": "What to include in a formal request",
+        "paragraphs": [],
+        "items": [],
+        "list": [
+          "The URL or headline of the content at issue.",
+          "A clear description of the statement, image, video, or other material you are challenging.",
+          "The legal or factual basis for the request, including supporting documents where relevant.",
+          "Your name, organization if applicable, and a reliable contact method for follow-up.",
+          "If you are acting on behalf of someone else, a brief statement of your authority to do so."
+        ]
+      },
+      {
+        "heading": "Removal, restriction, and update requests",
+        "paragraphs": [
+          "Policy Now reviews serious requests for correction, clarification, update, removal, or restricted display. Submission of a request does not by itself guarantee removal of accurate reporting or immediate depublication.",
+          "The newsroom's standard is to evaluate the request against the public record, editorial standards, applicable law, and the public interest. In some cases the appropriate response may be a correction, clarification, update note, or follow-up article rather than removal."
+        ],
+        "items": [],
+        "list": []
+      },
+      {
+        "heading": "Links to third-party material",
+        "paragraphs": [
+          "Policy Now may link to third-party sites, official records, social platforms, public databases, and outside documents for sourcing and reader context. Those third-party properties are governed by their own terms, policies, and accuracy practices.",
+          "A link to a third-party source does not necessarily mean Policy Now endorses every statement or policy on that external site."
+        ],
+        "items": [],
+        "list": []
+      },
+      {
+        "heading": "Formal notices and requests",
+        "paragraphs": [
+          "For legal notices, permissions questions, rights complaints, or formal requests related to published content, contact the newsroom directly so the request can be routed to the appropriate reviewer.",
+          "At the time of this update, Policy Now handles public-facing legal and policy correspondence through the published newsroom email addresses on this site."
+        ],
+        "items": [],
+        "list": []
+      }
+    ],
+    "footerTexts": [],
+    "email": null,
+    "updated": null
+  },
+  "ownership-and-funding": {
+    "title": "Ownership and Funding",
+    "intro": "This page explains how Policy Now is owned, funded, and managed, and how we protect editorial independence from commercial, political, or external influence. We believe transparency helps readers understand who supports our work and how editorial decisions are made.",
+    "sections": [
+      {
+        "heading": "What This Page Covers",
+        "paragraphs": [
+          "Policy Now operates as an independent digital news publication. This page outlines our approach to ownership, funding, editorial independence, conflict disclosures, and transparency regarding material relationships that may be relevant to readers.",
+          "The information provided here is intended to help readers understand how the organization is structured and how editorial decisions remain separate from commercial or financial interests."
+        ],
+        "items": [],
+        "list": []
+      },
+      {
+        "heading": "Editorial Control and Decision-Making",
+        "paragraphs": [
+          "Editorial decisions are made independently by our editors and journalists. Coverage decisions, reporting priorities, headlines, source selection, and publication timing are determined solely according to editorial judgment and the public interest.",
+          "Advertisers, sponsors, partners, political organizations, government entities, and other external parties do not control newsroom decisions and are not granted prior review or approval of editorial content."
+        ],
+        "items": [],
+        "list": []
+      },
+      {
+        "heading": "How Policy Now Is Funded",
+        "paragraphs": [
+          "Policy Now may generate revenue through advertising, sponsorships, content licensing, distribution agreements, partnerships, affiliate programs, and other lawful publishing activities. These revenue sources are maintained separately from editorial operations.",
+          "If Policy Now enters into a material funding arrangement, strategic partnership, or ownership structure that a reasonable reader would consider relevant to editorial independence, we will disclose that relationship on this page, within relevant coverage, or both."
+        ],
+        "items": [],
+        "list": []
+      },
+      {
+        "heading": "Conflicts of Interest and Recusal",
+        "paragraphs": [
+          "Journalists, editors, and contributors are expected to disclose personal, financial, political, professional, or family relationships that could reasonably create a conflict of interest or affect public confidence in their reporting.",
+          "When a conflict exists, appropriate steps may include disclosure, editorial oversight, reassignment, or recusal from coverage. Our goal is to protect the integrity and credibility of our journalism."
+        ],
+        "items": [],
+        "list": [
+          "Relevant personal, professional, or financial relationships should be disclosed before publication when appropriate.",
+          "Gifts, favors, or benefits that could compromise editorial independence should not be accepted.",
+          "Outside employment, advocacy activities, or consulting work that may create a conflict of interest must be disclosed and may require reassignment."
+        ]
+      },
+      {
+        "heading": "Commercial Support and Editorial Independence",
+        "paragraphs": [
+          "Policy Now maintains a clear separation between revenue activities and editorial operations. Commercial support does not guarantee coverage, influence reporting, or affect the conclusions reached by our journalists.",
+          "Sponsored content, affiliate material, advertising, and other commercial communications are clearly labeled so readers can distinguish them from independent editorial reporting."
+        ],
+        "items": [],
+        "list": []
+      },
+      {
+        "heading": "Political, Governmental, and Advocacy Influence",
+        "paragraphs": [
+          "Policy Now does not present political, governmental, or advocacy messaging as independent journalism. Editorial decisions are guided by evidence, verification, and the public interest rather than by political or organizational influence.",
+          "When coverage involves an organization, institution, or entity with which Policy Now has a material relationship, that relationship will be disclosed in clear language when appropriate."
+        ],
+        "items": [],
+        "list": []
+      },
+      {
+        "heading": "Changes to Ownership or Material Support",
+        "paragraphs": [
+          "Ownership structures and funding arrangements may change over time. If Policy Now undergoes a significant ownership change, enters into a material funding relationship, or adopts a support structure that could reasonably be relevant to readers, this page will be updated accordingly.",
+          "Readers who believe a relevant ownership, funding, or disclosure matter has not been addressed may contact our newsroom for review."
+        ],
+        "items": [],
+        "list": []
+      }
+    ],
+    "footerTexts": [],
+    "email": null,
+    "updated": null
+  },
+  "right-of-reply-policy": {
+    "title": "Right of Reply Policy",
+    "intro": "Policy Now is committed to fair, accurate, and responsible journalism. When reporting includes significant criticism, allegations, or materially disputed factual claims, we seek to provide relevant individuals and organizations with a reasonable opportunity to respond.",
+    "sections": [
+      {
+        "heading": "When We Seek a Response",
+        "paragraphs": [
+          "When a story contains significant criticism, allegations, serious factual disputes, or materially adverse claims about a person, organization, or institution, we aim to seek comment before publication whenever it is practical and appropriate to do so.",
+          "Seeking a response helps ensure accuracy, fairness, and completeness. It does not grant the subject of a story editorial control over reporting or publication decisions."
+        ],
+        "items": [],
+        "list": []
+      },
+      {
+        "heading": "How Outreach Is Conducted",
+        "paragraphs": [
+          "The method and timing of outreach depend on the nature of the story. Policy Now may contact individuals or their representatives through email, telephone, public contact channels, legal counsel, or other reasonable means.",
+          "Response timeframes vary according to circumstances. Breaking news, public safety matters, and time-sensitive reporting may require shorter response periods than investigative, analytical, or feature reporting."
+        ],
+        "items": [],
+        "list": []
+      },
+      {
+        "heading": "Information to Include in a Reply or Correction Request",
+        "paragraphs": [
+          "If you are responding to published or pending coverage, please provide the article headline or URL, the specific statement you dispute, the factual basis for your objection, any supporting documentation, and your preferred contact information for follow-up communication.",
+          "Detailed factual information is generally more helpful than broad denials. Identifying specific inaccuracies, omissions, or contextual concerns allows our editorial team to review the matter more effectively."
+        ],
+        "items": [],
+        "list": []
+      },
+      {
+        "heading": "Post-Publication Responses",
+        "paragraphs": [
+          "Individuals or organizations that believe published content is inaccurate, incomplete, or misleading may contact our newsroom for review. Depending on the circumstances, a response may result in a clarification, correction, update, editor's note, follow-up coverage, or no change where reporting remains supported by the available evidence.",
+          "Policy Now may publish or summarize a substantive response when doing so materially contributes to readers' understanding of the issue or dispute."
+        ],
+        "items": [],
+        "list": []
+      },
+      {
+        "heading": "What This Policy Does Not Guarantee",
+        "paragraphs": [
+          "A request for a right of reply does not guarantee publication of a full statement, removal of accurate reporting, or advance review and approval of editorial content by the subject of a story.",
+          "It does mean that requests will be reviewed carefully and evaluated against available evidence, editorial standards, and our corrections and accountability processes."
+        ],
+        "items": [],
+        "list": []
+      },
+      {
+        "heading": "Legal and Sensitive Matters",
+        "paragraphs": [
+          "Reporting involving legal proceedings, regulatory matters, allegations of misconduct, or other reputationally sensitive issues may require additional care in the outreach and review process. Our newsroom seeks to document relevant response efforts as part of its editorial record.",
+          "The purpose of a right of reply is to improve factual accuracy and fairness. It is not intended to provide a mechanism for influencing or suppressing reporting that is supported by verified evidence."
+        ],
+        "items": [],
+        "list": []
+      }
+    ],
+    "footerTexts": [],
+    "email": null,
+    "updated": null
+  },
+  "source-methodology": {
+    "title": "Source Methodology",
+    "intro": "Policy Now is committed to transparent, evidence-based journalism. This page explains how we gather, verify, evaluate, and attribute information, as well as how we communicate uncertainty and updates to readers.",
+    "sections": [
+      {
+        "heading": "How Reporting Begins",
+        "paragraphs": [
+          "Our reporting begins with verifiable information whenever possible. Sources may include official records, court documents, regulatory filings, public statements, direct interviews, public datasets, original media, and other primary source materials.",
+          "When information cannot be independently verified, we aim to describe it accurately and proportionately. Language should reflect the strength of the available evidence and avoid overstating what is known."
+        ],
+        "items": [],
+        "list": []
+      },
+      {
+        "heading": "Source Hierarchy and Verification",
+        "paragraphs": [
+          "Whenever feasible, Policy Now prioritizes primary sources and firsthand reporting over summaries, commentary, or aggregated information. Official documents, direct statements, and original reporting generally carry greater evidentiary value than secondary accounts.",
+          "The prominence of a source does not exempt a claim from scrutiny. Statements from public officials, corporations, advocacy groups, and other influential actors are subject to verification, contextualization, and independent review."
+        ],
+        "items": [],
+        "list": [
+          "Primary records and firsthand reporting are preferred whenever available.",
+          "Secondary reporting may inform coverage but should not be presented as established fact when underlying claims remain unresolved.",
+          "Key figures, dates, legal details, and timelines should be verified against original sources whenever practicable."
+        ]
+      },
+      {
+        "heading": "Anonymous Sources and Background Information",
+        "paragraphs": [
+          "Anonymous or background sources may be used when information is in the public interest and cannot reasonably be obtained on the record. In such cases, editors seek to understand the source's identity, access to information, credibility, and potential motivations.",
+          "When anonymity is granted, we aim to provide readers with as much relevant context as possible without compromising the source's safety, privacy, or confidentiality."
+        ],
+        "items": [],
+        "list": []
+      },
+      {
+        "heading": "Documents, Media, and Data",
+        "paragraphs": [
+          "Documents, photographs, screenshots, audio recordings, videos, and datasets are reviewed carefully for authenticity, provenance, timing, and context. We seek to avoid presenting excerpts or isolated materials in ways that could mislead readers.",
+          "The existence of a document does not necessarily prove the broadest interpretation of its contents. Our reporting aims to distinguish between what evidence directly shows and what requires analysis or interpretation."
+        ],
+        "items": [],
+        "list": []
+      },
+      {
+        "heading": "Attribution, Source Notes, and Links",
+        "paragraphs": [
+          "Attribution should be clear enough for readers to understand the origin of significant facts and claims. When appropriate, we may provide links to primary sources, official records, public documents, or supporting materials to help readers review the evidence themselves.",
+          "We seek to identify whether information comes from public records, official statements, direct reporting, or other sources whenever doing so improves transparency and reader understanding."
+        ],
+        "items": [],
+        "list": []
+      },
+      {
+        "heading": "How We Handle Uncertainty and Updates",
+        "paragraphs": [],
+        "items": [],
+        "list": [
+          "We do not present uncertainty as certainty for the sake of emphasis or impact.",
+          "We distinguish factual reporting from analysis, interpretation, and opinion.",
+          "We update reporting when new evidence, verified information, or material developments become available.",
+          "When facts remain disputed or unresolved, we aim to make that status clear to readers."
+        ]
+      },
+      {
+        "heading": "What This Policy Does Not Mean",
+        "paragraphs": [
+          "Transparency does not require disclosure of confidential sources or reporting methods when doing so would compromise safety, privacy, legal obligations, or legitimate journalistic practices.",
+          "It does mean providing readers with an honest explanation of the evidence supporting our reporting and communicating clearly about what is known, what is uncertain, and how conclusions were reached."
+        ],
+        "items": [],
+        "list": []
+      }
+    ],
+    "footerTexts": [],
+    "email": null,
+    "updated": null
+  }
+}
