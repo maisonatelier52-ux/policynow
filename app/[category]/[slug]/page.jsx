@@ -5,9 +5,69 @@ import authors from "../../../data/authors";
 import ClientNewsArticle from "../../../components/ClientNewsArticle";
 
 const SPECIAL_SLUG = "julio-herrera-velutini-pope-leo-xiv-castelgandolfo";
+const SITE_URL = "https://www.policynow.org";
+const SITE_NAME = "PolicyNow";
+const SITE_LOGO = `${SITE_URL}/image/policynow-logo.png`;
+const TWITTER_HANDLE = "@policynow";
+
+const absImage = (img) => (!img ? SITE_LOGO : img.startsWith("http") ? img : `${SITE_URL}${img}`);
 
 export function generateStaticParams() {
   return articles.map((a) => ({ category: a.category, slug: a.slug }));
+}
+
+export async function generateMetadata({ params }) {
+  const { category, slug } = await params;
+  const article = articles.find((a) => a.slug === slug && (a.category === category || slug === SPECIAL_SLUG));
+  if (!article) return {};
+
+  const url = `${SITE_URL}/${article.category}/${article.slug}`;
+  const image = absImage(article.heroImage);
+  const publishedIso = new Date(article.date).toISOString();
+  const authorInfo = authors.find((p) => p.name === article.author);
+
+  return {
+    title: article.title,
+    description: article.description,
+    keywords: `${article.categoryLabel} news, ${SITE_NAME}`,
+    authors: [{ name: article.author }],
+    creator: SITE_NAME,
+    publisher: SITE_NAME,
+    alternates: { canonical: url },
+    openGraph: {
+      title: article.title,
+      description: article.description,
+      url,
+      siteName: SITE_NAME,
+      images: [{ url: image, width: 1200, height: 630, alt: article.title }],
+      type: "article",
+      locale: "en_US",
+      publishedTime: publishedIso,
+      modifiedTime: publishedIso,
+      authors: [article.author],
+      section: article.categoryLabel,
+      tags: [article.categoryLabel],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: article.title,
+      description: article.description,
+      images: [image],
+      site: TWITTER_HANDLE,
+      creator: TWITTER_HANDLE,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+  };
 }
 
 function Paragraph({ block }) {
@@ -46,9 +106,61 @@ export default async function ArticlePage({ params }) {
   const shareUrl = `https://www.policynow.org/${article.category}/${article.slug}`;
   const authorInfo = authors.find((p) => p.name === article.author);
   const authorImage = authorInfo ? authorInfo.image : "/image/policynow-logo.png";
+  const publishedIso = new Date(article.date).toISOString();
+
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "@id": `${shareUrl}#article`,
+    headline: article.title,
+    description: article.description,
+    image: [absImage(article.heroImage)],
+    datePublished: publishedIso,
+    dateModified: publishedIso,
+    author: {
+      "@type": "Person",
+      name: article.author,
+      url: `${SITE_URL}/author`,
+      image: absImage(authorImage),
+    },
+    publisher: {
+      "@type": "NewsMediaOrganization",
+      name: SITE_NAME,
+      url: SITE_URL,
+      logo: { "@type": "ImageObject", url: SITE_LOGO },
+    },
+    mainEntityOfPage: { "@type": "WebPage", "@id": shareUrl },
+    articleSection: article.categoryLabel,
+    url: shareUrl,
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": `${shareUrl}#breadcrumb`,
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: article.categoryLabel,
+        item: `${SITE_URL}/${article.category}`,
+      },
+      { "@type": "ListItem", position: 3, name: article.title, item: shareUrl },
+    ],
+  };
 
   return (
-    <div>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <div>
       <section className="mx-auto max-w-3xl px-6 py-8">
         <div className="mb-3 text-xs font-semibold">
           <Link href={`/${article.category}`} title={article.categoryLabel} className="text-black hover:underline">
@@ -155,5 +267,6 @@ export default async function ArticlePage({ params }) {
         </section>
       )}
     </div>
+    </>
   );
 }

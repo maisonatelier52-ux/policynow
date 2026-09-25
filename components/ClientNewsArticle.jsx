@@ -57,9 +57,9 @@ export default function ClientNewsArticle({ article }) {
 
   return (
     <div className="bg-white font-serif leading-[1.3] text-[#17140f] antialiased">
-      {/* <div className="sticky top-0 z-50 h-1" style={{ background: LINE_SOFT }}>
+      <div className="sticky top-0 z-50 h-1" style={{ background: LINE_SOFT }}>
         <div ref={progressRef} className="h-full w-0 bg-[#7a2419] transition-[width] duration-100 ease-linear" />
-      </div> */}
+      </div>
 
       <div className="mx-auto max-w-[1180px] px-4 pt-8 sm:px-6 sm:pt-10">
         <div className="relative border-0 sm:border" style={{ borderColor: LINE }}>

@@ -100,7 +100,7 @@ export default function Header() {
           </button>
 
           <Link href="/" title="Logo">
-            <img alt="Logo" className="h-10 w-auto" src="/image/policynow-logo.png" />
+            <img alt="Logo" className="h-11 w-auto" src="/image/policynow-logo.png" />
           </Link>
 
           <button

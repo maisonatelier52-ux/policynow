@@ -67,9 +67,39 @@ export default function Home() {
   const prSecond = pick(featuredPr, 1)[0];
   const prRest = pick(featuredPr, 6);
 
+  const SITE_URL = "https://www.policynow.org";
+  const SITE_NAME = "PolicyNow";
+
+  const organizationJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "NewsMediaOrganization",
+    "@id": `${SITE_URL}#organization`,
+    name: SITE_NAME,
+    url: SITE_URL,
+    logo: { "@type": "ImageObject", url: `${SITE_URL}/image/policynow-logo.png` },
+    sameAs: ["https://x.com/PolicynowO41566", "https://www.instagram.com/poli.cynow/"],
+  };
+
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${SITE_URL}#website`,
+    name: SITE_NAME,
+    url: SITE_URL,
+    publisher: { "@id": `${SITE_URL}#organization` },
+  };
 
   return (
-    <div className="mx-6 lg:mx-12">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+      />
+      <div className="mx-6 lg:mx-12">
       {/* Top quick-news strip */}
       <div className="grid grid-cols-1 gap-4 border-b border-black py-5 lg:grid-cols-4">
         {newsRow.map((a) => (
@@ -79,7 +109,7 @@ export default function Home() {
               <Link
                 href={`/${a.category}/${a.slug}`}
                 title={a.title}
-                className="block text-xs font-semibold leading-snug text-[#181818] hover:underline "
+                className="block text-xs font-semibold leading-snug text-[#181818] hover:underline"
               >
                 {a.title}
               </Link>
@@ -352,7 +382,7 @@ export default function Home() {
       </div>
 
       {/* Finance & Markets grid */}
-      <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-5 pt-5">
+      <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-5">
         {gridContainerItems.map((a, i) => (
           <div
             className={i === gridContainerItems.length - 1 ? "" : "lg:border-r lg:border-gray-300 lg:pr-2.5"}
@@ -371,7 +401,7 @@ export default function Home() {
 
       {/* Featured PR spotlight */}
       {prHero && (
-        <div className="py-3 text-center">
+        <div className="py-10 text-center">
           <div className="mb-8">
             <Link
               href={`/${prHero.category}/${prHero.slug}`}
@@ -382,8 +412,8 @@ export default function Home() {
             </Link>
           </div>
           <div className="mb-7 flex flex-col justify-center gap-5 text-left sm:flex-row">
-            <div className="flex-1 basis-[30px] font-sans text-lg leading-snug">{prHero.description}</div>
-            <div className="flex-1 basis-[30px] font-sans text-lg leading-snug">{prHero.heroCaption}</div>
+            <div className="flex-1 basis-[0px] font-sans text-lg leading-snug">{prHero.description}</div>
+            <div className="flex-1 basis-[0px] font-sans text-lg leading-snug">{prHero.heroCaption}</div>
           </div>
           <img alt={prHero.title} className="mb-5 block h-auto w-full" src={prHero.heroImage} />
         </div>
@@ -430,5 +460,6 @@ export default function Home() {
         ))}
       </div>
     </div>
+    </>
   );
 }

@@ -2,6 +2,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import articles from "../../data/articles";
 
+const SITE_URL = "https://www.policynow.org";
+const SITE_NAME = "PolicyNow";
+
 const CATEGORY_LABELS = {
   us: "U.S.",
   "politics-and-policy": "Politics & Policy",
@@ -14,6 +17,47 @@ const CATEGORY_LABELS = {
 
 export function generateStaticParams() {
   return Object.keys(CATEGORY_LABELS).map((category) => ({ category }));
+}
+
+export async function generateMetadata({ params }) {
+  const { category } = await params;
+  const label = CATEGORY_LABELS[category];
+  if (!label) return {};
+
+  const url = `${SITE_URL}/${category}`;
+  const description = `Latest ${label} news, analysis, and coverage from ${SITE_NAME} — where policy meets public perception.`;
+
+  return {
+    title: label,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title: label,
+      description,
+      url,
+      siteName: SITE_NAME,
+      type: "website",
+      locale: "en_US",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: label,
+      description,
+      site: "@policynow",
+      creator: "@policynow",
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+  };
 }
 
 function excerpt(text, max = 130) {
@@ -35,10 +79,49 @@ export default async function CategoryPage({ params }) {
   const side = list[2];
   const feed = list.slice(3);
 
+  const categoryUrl = `${SITE_URL}/${category}`;
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": `${categoryUrl}#breadcrumb`,
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: label, item: categoryUrl },
+    ],
+  };
+
+  const collectionJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${categoryUrl}#collection`,
+    name: label,
+    url: categoryUrl,
+    isPartOf: { "@type": "WebSite", name: SITE_NAME, url: SITE_URL },
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: list.slice(0, 10).map((a, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        url: `${SITE_URL}/${a.category}/${a.slug}`,
+        name: a.title,
+      })),
+    },
+  };
+
   return (
-    <div className="mx-6 border-b border-gray-300 pb-5 lg:mx-12">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}
+      />
+      <div className="mx-6 border-b border-gray-300 pb-5 lg:mx-12">
       <div className="mb-5">
-        <h1 className="mt-16 text-[21px] font-semibold uppercase">{label}</h1>
+        <h1 className="mt-16 text-[20px] font-semibold uppercase">{label}</h1>
         <div className="mt-2.5 border-t border-black" />
       </div>
 
@@ -107,7 +190,7 @@ export default async function CategoryPage({ params }) {
                     {a.title}
                   </Link>
                 </h3>
-                <p className="text-[16px] leading-snug text-black">{excerpt(a.description)}</p>
+                <p className="text-[17px] leading-snug text-black">{excerpt(a.description)}</p>
                 <div className="mt-2 font-sans text-[10px] text-gray-500">
                   {a.dateDisplay} · {a.author.toUpperCase()}
                 </div>
@@ -164,5 +247,6 @@ export default async function CategoryPage({ params }) {
         </aside>
       </div>
     </div>
+    </>
   );
 }
