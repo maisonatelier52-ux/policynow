@@ -2,9 +2,9 @@ import Link from "next/link";
 import authors from "../../data/authors";
 
 const DEPARTMENTS = [
-  { icon: "✎", title: "Editorial", text: "Guides newsroom standards and ensures quality, clarity, and editorial consistency." },
+  { icon: "✎", title: "Editorial", text: "Guides publication standards and ensures quality, clarity, and editorial consistency." },
   { icon: "✓", title: "Fact-Checking", text: "Verifies information, sources, and claims before publication." },
-  { icon: "📰", title: "Production", text: "Manages publishing workflows and maintains our digital news platform." },
+  { icon: "📰", title: "Production", text: "Manages publishing workflows and maintains our digital publication." },
   { icon: "👥", title: "Audience & Community", text: "Engages with readers and supports meaningful community participation." },
 ];
 
@@ -15,16 +15,16 @@ export default function OurTeamPage() {
         <div>
           <h1 className="mb-3.5 font-serif text-4xl">Our Team</h1>
           <p className="text-base leading-relaxed text-[#4a4f57]">
-            At PolicyNow, our journalists, editors, analysts, and researchers work together to produce accurate,
-            independent, and public-interest journalism. We are committed to delivering reporting that is
-            factual, transparent, and accountable to our readers.
+            At PolicyNow, our editors, contributors, analysts, and researchers work together to publish useful,
+            independent policy analysis and current-affairs context. We are committed to work that is
+            factual, transparent, and accountable to readers.
           </p>
         </div>
         <div className="rounded-xl border border-[#ece9e4] bg-[#f8f7f5] p-5">
           <h4 className="mb-2.5 text-[13px] tracking-wide text-[#b3261e]">OUR MISSION</h4>
           <p className="text-base leading-relaxed text-[#4a4f57]">
-            Our mission is to inform the public through reliable, evidence-based reporting. We seek to explain
-            complex issues, hold institutions accountable, and provide readers with journalism they can trust.
+            Our mission is to inform readers through reliable, evidence-based analysis. We seek to explain
+            complex issues, examine public claims, and provide context readers can evaluate and trust.
           </p>
         </div>
       </div>
@@ -39,7 +39,7 @@ export default function OurTeamPage() {
               <h3 className="mb-1 text-[17px]">{a.name}</h3>
               <div className="mb-2.5 text-[12.5px] font-bold uppercase tracking-wide text-[#b3261e]">{a.role}</div>
               <p className="mb-3 text-sm leading-relaxed text-[#4a4f57]">{a.bio}</p>
-              <Link href="/author" className="text-[13px] font-semibold text-[#14181f] hover:underline">
+              <Link href={`/author/${a.id}`} className="text-[13px] font-semibold text-[#14181f] hover:underline">
                 View full bio →
               </Link>
             </div>
@@ -48,11 +48,11 @@ export default function OurTeamPage() {
       </div>
 
       <div className="mb-14">
-        <div className="mb-2 text-[13px] font-bold tracking-[0.1em] text-[#14181f]">POLICYNOW STAFF</div>
+        <div className="mb-2 text-[13px] font-bold tracking-[0.1em] text-[#14181f]">HOW WE PUBLISH</div>
         <div className="mb-6 h-[3px] w-11 rounded bg-[#b3261e]" />
         <p className="mb-6 text-base leading-relaxed text-[#33373d]">
-          Behind every story is a dedicated team working across multiple departments to uphold editorial
-          standards, maintain accuracy, and support the delivery of independent journalism.
+          Behind every post is a publishing process designed to uphold editorial standards, maintain accuracy,
+          and distinguish original commentary from sourced or partner material.
         </p>
         <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
           {DEPARTMENTS.map((d) => (
@@ -66,7 +66,7 @@ export default function OurTeamPage() {
       </div>
 
       <div>
-        <div className="mb-2 text-[13px] font-bold tracking-[0.1em] text-[#14181f]">ALL AUTHORS</div>
+        <div className="mb-2 text-[13px] font-bold tracking-[0.1em] text-[#14181f]">ALL CONTRIBUTORS</div>
         <div className="mb-6 h-[3px] w-11 rounded bg-[#b3261e]" />
         <div className="flex flex-wrap gap-2.5">
           {authors.map((a) => (

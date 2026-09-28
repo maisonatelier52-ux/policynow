@@ -52,7 +52,7 @@ export default function PolicyPage({ data }) {
       <div className="mt-9 rounded-xl bg-[#14181f] p-6 text-white">
         <h3 className="mb-2 text-lg font-semibold">Questions about this policy?</h3>
         <p className="mb-3.5 text-[15px] text-[#cfd3da]">
-          Reach our editorial team directly and we&rsquo;ll get back to you.
+          Reach our editorial team directly and we&rsquo;ll review your message.
         </p>
         <a
           className="inline-block border-b border-white/40 font-semibold text-white no-underline"
@@ -64,8 +64,8 @@ export default function PolicyPage({ data }) {
 
       <div className="mt-12 border-t border-gray-200 pt-6 text-center">
         <p className="mb-2 text-[14.5px] text-[#6b7078]">
-          PolicyNow is an independent digital news publication operated by a distributed editorial team based in
-          the United States.
+          PolicyNow is an independent policy and current-affairs blog operated by a distributed editorial team
+          based in the United States.
         </p>
         {updated && <div className="text-[13px] tracking-wide text-[#9a9fa6]">{updated}</div>}
       </div>

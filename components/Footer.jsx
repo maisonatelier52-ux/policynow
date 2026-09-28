@@ -7,16 +7,17 @@ export default function Footer() {
         <div>
           <img alt="PolicyNow" className="h-12 w-[230px] object-contain" src="/image/policynow-logo.png" />
           <p className="mt-1 mb-6 text-[0.95rem] leading-relaxed text-gray-700">
-            Blending policy analysis, public perception, and strategic storytelling for
-            policymakers, business leaders, and thought leaders.
+            An independent policy and current-affairs blog offering analysis, explainers,
+            commentary, and clearly labeled sourced posts.
           </p>
+          
         </div>
 
         <div>
           <div className="mb-2.5 font-sans text-[0.8rem] font-semibold">CATEGORIES</div>
           <div className="flex flex-col">
             <Link className="mb-2 block text-[0.85rem] text-black hover:underline" href="/politics-and-policy">
-              Politics &amp; Policy
+              Politics &amp; Governance
             </Link>
             <Link className="mb-2 block text-[0.85rem] text-black hover:underline" href="/business-and-economy">
               Business &amp; Economy
@@ -25,7 +26,7 @@ export default function Footer() {
               Global Affairs
             </Link>
             <Link className="mb-2 block text-[0.85rem] text-black hover:underline" href="/technology-and-innovation">
-              Technology &amp; Innovation
+              Technology
             </Link>
             <Link className="mb-2 block text-[0.85rem] text-black hover:underline" href="/corrections-policy">
               Corrections Policy
@@ -43,11 +44,14 @@ export default function Footer() {
               Finance &amp; Markets
             </Link>
             <Link className="mb-2 block text-[0.85rem] text-black hover:underline" href="/featured-pr">
-              Featured PR
+              Partner &amp; Press Releases
             </Link>
             <Link className="mb-2 block text-[0.85rem] text-black hover:underline" href="/author">
-              Authors
+              Contributors
             </Link>
+            <a className="mb-2 block text-[0.85rem] text-black hover:underline" href="/rss.xml">
+              RSS Feed
+            </a>
             <Link className="mb-2 block text-[0.85rem] text-black hover:underline" href="/about-us">
               About Us
             </Link>

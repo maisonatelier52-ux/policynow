@@ -3,7 +3,7 @@ import PolicyPage from "../../components/PolicyPage";
 const data = {
   title: "Privacy Policy",
   intro:
-    "PolicyNow values reader trust. We collect only limited information necessary to operate our newsroom, communicate with readers, and improve our journalism. This policy explains what we collect, why we collect it, and how we protect it.",
+    "PolicyNow values reader trust. We collect only limited information necessary to operate our publication, communicate with readers, and improve our content. This policy explains what we collect, why we collect it, and how we protect it.",
   sections: [
     {
       heading: "Information We Collect",
@@ -26,7 +26,7 @@ const data = {
     {
       heading: "Cookies and Analytics",
       paragraphs: [
-        "We use cookies and analytics tools to understand how readers interact with our content. You may disable cookies in your browser without affecting access to our reporting.",
+        "We may use cookies and privacy-conscious analytics tools to understand how readers interact with our content. You may disable cookies in your browser without affecting access to our posts.",
         "Third-party analytics services may process anonymized data under their own privacy policies.",
       ],
     },

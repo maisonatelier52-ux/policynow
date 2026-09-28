@@ -1,6 +1,7 @@
 import Link from "next/link";
 import articles from "../data/articles";
 import authors from "../data/authors";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL, contributorPath } from "../lib/site";
 
 function byCategory(cat) {
   return articles.filter((a) => a.category === cat && !a.special);
@@ -47,7 +48,7 @@ export default function Home() {
   const global = sortedByDate(byCategory("global-affairs"));
   const featuredPr = sortedByDate(byCategory("featured-pr"));
 
-  const newsRow = pick(all, 4);
+  const recentPosts = pick(all, 4);
   const [heroMain, heroSub] = pick(all, 2);
   const bizFeatured = pick(business, 2);
   const politicsTop = pick(politics, 2);
@@ -67,15 +68,13 @@ export default function Home() {
   const prSecond = pick(featuredPr, 1)[0];
   const prRest = pick(featuredPr, 6);
 
-  const SITE_URL = "https://www.policynow.org";
-  const SITE_NAME = "PolicyNow";
-
   const organizationJsonLd = {
     "@context": "https://schema.org",
-    "@type": "NewsMediaOrganization",
+    "@type": "Organization",
     "@id": `${SITE_URL}#organization`,
     name: SITE_NAME,
     url: SITE_URL,
+    description: SITE_DESCRIPTION,
     logo: { "@type": "ImageObject", url: `${SITE_URL}/image/policynow-logo.png` },
     sameAs: ["https://x.com/PolicynowO41566", "https://www.instagram.com/poli.cynow/"],
   };
@@ -100,9 +99,9 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
       />
       <div className="mx-6 lg:mx-12">
-      {/* Top quick-news strip */}
+      {/* Recent posts strip */}
       <div className="grid grid-cols-1 gap-4 border-b border-black py-5 lg:grid-cols-4">
-        {newsRow.map((a) => (
+        {recentPosts.map((a) => (
           <div className="flex gap-2.5" key={a.id}>
             <img alt={a.title} className="h-[70px] w-[70px] shrink-0 object-cover" src={a.heroImage} />
             <div className="min-w-0">
@@ -119,14 +118,28 @@ export default function Home() {
         ))}
       </div>
 
+      <section className="my-6 grid grid-cols-1 gap-4 border border-[#dfdcd5] bg-[#f7f5f1] px-5 py-5 sm:grid-cols-[1fr_auto] sm:items-center sm:px-7">
+        <div>
+          <div className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#8f211b]">
+            Independent policy &amp; current-affairs blog
+          </div>
+          <p className="mt-2 max-w-3xl text-sm leading-relaxed text-[#4d535c] sm:text-base">
+            PolicyNow publishes analysis, explainers, commentary, and clearly labeled sourced posts. 
+          </p>
+        </div>
+        <Link href="/editorial-policy" className="text-sm font-semibold text-[#14181f] underline decoration-gray-400 underline-offset-4 hover:decoration-black">
+          How we publish →
+        </Link>
+      </section>
+
       <div className="grid grid-cols-1 gap-8 pt-6 lg:grid-cols-[3fr_1fr]">
         <div className="lg:pr-4">
           <div>
             <div className="grid grid-cols-1 gap-5 lg:grid-cols-[1fr_2fr]">
               <div>
                 <div className="flex items-center gap-1.5 text-[8px] font-semibold uppercase text-[#d0022c]">
-                  <span className="inline-block h-2.5 w-2.5 animate-pulse rounded-full bg-[#d0022c]" />
-                  <span className="text-black">Live {heroMain?.dateDisplay}</span>
+                  <span className="inline-block h-2.5 w-2.5 rounded-full bg-[#d0022c]" />
+                  <span className="text-black">Featured post · {heroMain?.dateDisplay}</span>
                 </div>
                 <h1 className="mt-3.5">
                   <Link
@@ -153,7 +166,7 @@ export default function Home() {
                 <div className="mt-3 text-[9px] font-semibold uppercase text-black">{heroMain.dateDisplay}</div>
               </div>
               <div>
-                <img alt="Main news image" className="h-[314px] w-full object-cover" src={heroMain.heroImage} />
+                <img alt={heroMain.title} className="h-[314px] w-full object-cover" src={heroMain.heroImage} />
               </div>
             </div>
 
@@ -208,13 +221,13 @@ export default function Home() {
                 )}
               </div>
               <div>
-                {businessImage && (
-                  <img alt={businessImage.title} className="h-[314px] w-full object-cover" src={businessImage.heroImage} />
+                {politicsTop[0].heroImage && (
+                  <img alt={politicsTop[0].title} className="h-[314px] w-full object-cover" src={politicsTop[0].heroImage} />
                 )}
               </div>
             </div>
 
-            <SectionLabel>Technology &amp; Innovation</SectionLabel>
+            <SectionLabel>Technology</SectionLabel>
             <div className="mb-6 grid grid-cols-1 gap-x-8 md:grid-cols-2">
               <div>
                 {techStories.slice(0, 2).map((a, i) => (
@@ -229,7 +242,7 @@ export default function Home() {
                         </Link>
                       </h3>
                       <div className="text-[10px] font-light uppercase tracking-wide text-[#747474]">
-                        By <Link href="/author" title="Author" className="hover:underline">{a.author}</Link>
+                        Edited by <Link href={contributorPath(a.author, authors)} title="Editor" className="hover:underline">{a.author}</Link>
                         <span className="mx-1">·</span> {a.dateDisplay}
                       </div>
                     </div>
@@ -252,7 +265,7 @@ export default function Home() {
                         </Link>
                       </h3>
                       <div className="text-[10px] font-light uppercase tracking-wide text-[#747474]">
-                        By <Link href="/author" title="Author" className="hover:underline">{a.author}</Link>
+                        Edited by <Link href={contributorPath(a.author, authors)} title="Editor" className="hover:underline">{a.author}</Link>
                         <span className="mx-1">·</span> {a.dateDisplay}
                       </div>
                     </div>
@@ -350,22 +363,22 @@ export default function Home() {
             </div>
           ))}
 
-          <SectionLabel>Top Authors</SectionLabel>
+          <SectionLabel>Contributors</SectionLabel>
           <div className="mx-auto max-w-[500px] font-sans">
             {authors.map((p) => (
               <div className="flex items-center border-b border-gray-200 py-3.5" key={p.id}>
                 <div className="mr-4 shrink-0">
-                  <Link href="/author" title={p.name}>
+                  <Link href={`/author/${p.id}`} title={p.name}>
                     <img alt={p.name} className="h-[60px] w-[60px] rounded-full object-cover" src={p.image} />
                   </Link>
                 </div>
                 <div>
                   <div className="mb-1.5">
-                    <Link href="/author" title={p.name} className="text-base font-semibold hover:underline">
+                    <Link href={`/author/${p.id}`} title={p.name} className="text-base font-semibold hover:underline">
                       {p.name}
                     </Link>
                   </div>
-                  <Link href="/author" title={p.role} className="text-[15px] font-medium leading-snug text-[#575757]">
+                  <Link href={`/author/${p.id}`} title={p.role} className="text-[15px] font-medium leading-snug text-[#575757]">
                     {p.role.split(" — ")[0]}
                   </Link>
                 </div>
@@ -382,7 +395,7 @@ export default function Home() {
       </div>
 
       {/* Finance & Markets grid */}
-      <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-5">
+      <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-5 mt-0 md:mt-5">
         {gridContainerItems.map((a, i) => (
           <div
             className={i === gridContainerItems.length - 1 ? "" : "lg:border-r lg:border-gray-300 lg:pr-2.5"}
@@ -399,9 +412,12 @@ export default function Home() {
         ))}
       </div>
 
-      {/* Featured PR spotlight */}
+      {/* Partner and press-release spotlight */}
       {prHero && (
         <div className="py-10 text-center">
+          <div className="mb-4 inline-block border border-[#b3261e] px-3 py-1 font-sans text-[10px] font-bold uppercase tracking-[0.14em] text-[#8f211b]">
+            Partner or press release · Source claims not independently verified
+          </div>
           <div className="mb-8">
             <Link
               href={`/${prHero.category}/${prHero.slug}`}

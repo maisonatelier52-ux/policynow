@@ -2,13 +2,13 @@ const CARDS = [
   {
     icon: "✉",
     title: "Editorial & General Contact",
-    desc: "Questions about our reporting, coverage ideas, or editorial matters.",
+    desc: "Questions about our posts, topic ideas, or editorial matters.",
     email: "contact@policynow.org",
   },
   {
     icon: "➤",
-    title: "Confidential News Tips",
-    desc: "Share information that you believe should be investigated or reported.",
+    title: "Source Material & Tips",
+    desc: "Share documents, research, or information that may support future analysis.",
     email: "tips@policynow.org",
   },
   {
@@ -20,7 +20,7 @@ const CARDS = [
   {
     icon: "👤",
     title: "Media & Press Inquiries",
-    desc: "Journalists, researchers, or organizations seeking collaboration.",
+    desc: "Writers, researchers, or organizations seeking editorial collaboration.",
     email: "press@policynow.org",
   },
 ];
@@ -33,8 +33,8 @@ export default function ContactPage() {
       </h1>
       <div className="mx-auto mb-5 h-[3px] w-16 rounded bg-[#b3261e]" />
       <p className="mx-auto max-w-[640px] text-[17px] leading-relaxed text-[#4a4f57]">
-        PolicyNow is an independent newsroom. We welcome tips, corrections, and communication from readers,
-        journalists, and organizations.
+        PolicyNow is an independent policy and current-affairs blog. We welcome source material, corrections,
+        questions, and communication from readers, researchers, and organizations.
       </p>
 
       <div className="my-11 grid grid-cols-1 gap-5 text-left sm:grid-cols-2">

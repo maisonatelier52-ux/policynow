@@ -3,34 +3,108 @@ import { notFound } from "next/navigation";
 import articles from "../../../data/articles";
 import authors from "../../../data/authors";
 import ClientNewsArticle from "../../../components/ClientNewsArticle";
+import {
+  SITE_NAME,
+  SITE_URL,
+  TWITTER_HANDLE,
+  categoryLabel,
+  contributorPath,
+  postTypeLabel,
+} from "../../../lib/site";
 
 const SPECIAL_SLUG = "julio-herrera-velutini-pope-leo-xiv-castelgandolfo";
-const SITE_URL = "https://www.policynow.org";
-const SITE_NAME = "PolicyNow";
 const SITE_LOGO = `${SITE_URL}/image/policynow-logo.png`;
-const TWITTER_HANDLE = "@policynow";
 
 const absImage = (img) => (!img ? SITE_LOGO : img.startsWith("http") ? img : `${SITE_URL}${img}`);
 
+function toIso(date) {
+  if (!date) return undefined;
+  const parsed = new Date(date);
+  return Number.isNaN(parsed.getTime()) ? undefined : parsed.toISOString();
+}
+
+function formatDate(date) {
+  if (!date) return null;
+  return new Intl.DateTimeFormat("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(new Date(`${date}T00:00:00Z`));
+}
+
+function blockText(block) {
+  if (block?.text) return block.text;
+  return (block?.runs || []).map((run) => run.text || "").join("");
+}
+
+function comparableText(value) {
+  return (value || "")
+    .toLowerCase()
+    .replace(/[^\p{L}\p{N}]+/gu, " ")
+    .trim();
+}
+
+function contentWithoutRepeatedDeck(article) {
+  const blocks = article.content || [];
+  const firstParagraphIndex = blocks.findIndex(
+    (block) => block?.type === "p" && blockText(block).trim(),
+  );
+
+  if (firstParagraphIndex < 0) return blocks;
+
+  const lead = comparableText(blockText(blocks[firstParagraphIndex]));
+  const deck = comparableText(article.description);
+  const repeatsDeck =
+    Math.min(lead.length, deck.length) >= 80 &&
+    (lead === deck || lead.startsWith(deck) || deck.startsWith(lead));
+
+  return repeatsDeck
+    ? blocks.filter((_, index) => index !== firstParagraphIndex)
+    : blocks;
+}
+
+function isInlineHeading(block) {
+  const visibleRuns = (block?.runs || []).filter((run) => (run.text || "").trim());
+  const text = blockText(block).trim();
+  return (
+    block?.type === "p" &&
+    visibleRuns.length > 0 &&
+    visibleRuns.every((run) => run.bold) &&
+    text.length > 0 &&
+    text.length < 110
+  );
+}
+
+function startsMidThought(article) {
+  const first = blockText(article.content?.[0]).trim();
+  return /^(and|but|however|still|yet|the result|this|these|those)\b/i.test(first);
+}
+
 export function generateStaticParams() {
-  return articles.map((a) => ({ category: a.category, slug: a.slug }));
+  return articles.map((article) => ({ category: article.category, slug: article.slug }));
 }
 
 export async function generateMetadata({ params }) {
   const { category, slug } = await params;
-  const article = articles.find((a) => a.slug === slug && (a.category === category || slug === SPECIAL_SLUG));
+  const article = articles.find(
+    (item) => item.slug === slug && (item.category === category || slug === SPECIAL_SLUG),
+  );
   if (!article) return {};
 
   const url = `${SITE_URL}/${article.category}/${article.slug}`;
   const image = absImage(article.heroImage);
-  const publishedIso = new Date(article.date).toISOString();
-  const authorInfo = authors.find((p) => p.name === article.author);
+  const publishedIso = toIso(article.date);
+  const modifiedIso = toIso(article.editorial?.reviewed || article.date);
+  const contributorUrl = `${SITE_URL}${contributorPath(article.author, authors)}`;
+  const label = categoryLabel(article.category, article.categoryLabel);
+  const sourceIdentified = article.editorial?.source?.name !== "Source not identified";
 
   return {
     title: article.title,
     description: article.description,
-    keywords: `${article.categoryLabel} news, ${SITE_NAME}`,
-    authors: [{ name: article.author }],
+    keywords: `${label}, policy blog, current affairs, ${SITE_NAME}`,
+    authors: [{ name: article.author, url: contributorUrl }],
     creator: SITE_NAME,
     publisher: SITE_NAME,
     alternates: { canonical: url },
@@ -43,10 +117,10 @@ export async function generateMetadata({ params }) {
       type: "article",
       locale: "en_US",
       publishedTime: publishedIso,
-      modifiedTime: publishedIso,
+      modifiedTime: modifiedIso,
       authors: [article.author],
-      section: article.categoryLabel,
-      tags: [article.categoryLabel],
+      section: label,
+      tags: [label, postTypeLabel(article.editorial?.type)].filter(Boolean),
     },
     twitter: {
       card: "summary_large_image",
@@ -57,10 +131,10 @@ export async function generateMetadata({ params }) {
       creator: TWITTER_HANDLE,
     },
     robots: {
-      index: true,
+      index: sourceIdentified,
       follow: true,
       googleBot: {
-        index: true,
+        index: sourceIdentified,
         follow: true,
         "max-video-preview": -1,
         "max-image-preview": "large",
@@ -72,65 +146,100 @@ export async function generateMetadata({ params }) {
 
 function Paragraph({ block }) {
   return (
-    <p className="mb-6 text-base leading-[30px]">
-      {block.runs.map((run, i) =>
+    <p className="mb-6 font-serif text-[18px] leading-[1.75] text-[#282b30]">
+      {block.runs.map((run, index) =>
         run.break ? (
-          <br key={i} />
+          <br key={index} />
         ) : run.bold ? (
-          <strong key={i}>{run.text}</strong>
+          <strong key={index}>{run.text}</strong>
         ) : (
-          <span key={i}>{run.text}</span>
-        )
+          <span key={index}>{run.text}</span>
+        ),
       )}
     </p>
   );
+}
+
+function StoryBlock({ block }) {
+  if (block.type === "h2" || isInlineHeading(block)) {
+    return (
+      <h2 className="mb-4 mt-12 font-sans text-2xl font-bold leading-tight text-[#111318]">
+        {block.text || blockText(block)}
+      </h2>
+    );
+  }
+  return <Paragraph block={block} />;
 }
 
 export default async function ArticlePage({ params }) {
   const { category, slug } = await params;
 
   if (slug === SPECIAL_SLUG) {
-    const article = articles.find((a) => a.slug === SPECIAL_SLUG);
-    if (!article) notFound();
-    return <ClientNewsArticle article={article} />;
+    const special = articles.find((article) => article.slug === SPECIAL_SLUG);
+    if (!special) notFound();
+    return <ClientNewsArticle article={special} />;
   }
 
-  const article = articles.find((a) => a.category === category && a.slug === slug && !a.special);
+  const article = articles.find(
+    (item) => item.category === category && item.slug === slug && !item.special,
+  );
   if (!article) notFound();
 
   const related = articles
-    .filter((a) => a.category === category && a.slug !== slug && !a.special)
+    .filter((item) => item.category === category && item.slug !== slug && !item.special)
     .sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0))
-    .slice(0, 5);
+    .slice(0, 4);
 
-  const shareUrl = `https://www.policynow.org/${article.category}/${article.slug}`;
-  const authorInfo = authors.find((p) => p.name === article.author);
-  const authorImage = authorInfo ? authorInfo.image : "/image/policynow-logo.png";
-  const publishedIso = new Date(article.date).toISOString();
+  const shareUrl = `${SITE_URL}/${article.category}/${article.slug}`;
+  const authorInfo = authors.find((person) => person.name === article.author);
+  const authorImage = authorInfo?.image || "/image/policynow-logo.png";
+  const editorial = article.editorial || {};
+  const source = editorial.source || {};
+  const sourceDate = editorial.originalPublished || article.date;
+  const publishedIso = toIso(article.date);
+  const modifiedIso = toIso(editorial.reviewed || article.date);
+  const isPressRelease = editorial.type === "Press release";
+  const isSyndicated = editorial.type === "Syndicated report";
+  const sourceIdentified = source.name !== "Source not identified";
+  const categoryName = categoryLabel(article.category, article.categoryLabel);
+  const authorPath = contributorPath(article.author, authors);
+  const contentBlocks = contentWithoutRepeatedDeck(article);
+
+  const schemaAuthor =
+    editorial.type === "Feature"
+      ? { "@type": "Person", name: article.author, url: `${SITE_URL}${authorPath}` }
+      : {
+          "@type": "Organization",
+          name: source.name || "PolicyNow Editorial Team",
+          ...(source.url ? { url: source.url } : {}),
+        };
 
   const articleJsonLd = {
     "@context": "https://schema.org",
-    "@type": "NewsArticle",
+    "@type": "BlogPosting",
     "@id": `${shareUrl}#article`,
     headline: article.title,
     description: article.description,
     image: [absImage(article.heroImage)],
-    datePublished: publishedIso,
-    dateModified: publishedIso,
-    author: {
+    ...(publishedIso ? { datePublished: publishedIso } : {}),
+    ...(modifiedIso ? { dateModified: modifiedIso } : {}),
+    author: schemaAuthor,
+    editor: {
       "@type": "Person",
       name: article.author,
-      url: `${SITE_URL}/author`,
       image: absImage(authorImage),
+      url: `${SITE_URL}${authorPath}`,
     },
     publisher: {
-      "@type": "NewsMediaOrganization",
+      "@type": "Organization",
       name: SITE_NAME,
       url: SITE_URL,
       logo: { "@type": "ImageObject", url: SITE_LOGO },
     },
     mainEntityOfPage: { "@type": "WebPage", "@id": shareUrl },
-    articleSection: article.categoryLabel,
+    articleSection: categoryName,
+    isAccessibleForFree: true,
+    ...(source.url ? { citation: source.url } : {}),
     url: shareUrl,
   };
 
@@ -143,7 +252,7 @@ export default async function ArticlePage({ params }) {
       {
         "@type": "ListItem",
         position: 2,
-        name: article.categoryLabel,
+        name: categoryName,
         item: `${SITE_URL}/${article.category}`,
       },
       { "@type": "ListItem", position: 3, name: article.title, item: shareUrl },
@@ -160,113 +269,193 @@ export default async function ArticlePage({ params }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
-      <div>
-      <section className="mx-auto max-w-3xl px-6 py-8">
-        <div className="mb-3 text-xs font-semibold">
-          <Link href={`/${article.category}`} title={article.categoryLabel} className="text-black hover:underline">
-            {article.categoryLabel}
-          </Link>
-        </div>
-        <div className="flex items-center text-sm font-bold text-[#d00]">
-          <span className="mr-1.5 inline-block h-2.5 w-2.5 rounded-full bg-[#d00]" />
-          <p className="m-0">
-            <span className="mx-1.5 rounded bg-[#d00] px-1.5 py-0.5 font-sans text-[10px] font-bold text-white">
-              LIVE
+
+      <main className="bg-white">
+        <header className="mx-auto max-w-4xl px-6 pb-8 pt-10 sm:pt-14">
+          <div className="mb-5 flex flex-wrap items-center gap-2 font-sans text-[11px] font-bold uppercase tracking-[0.12em]">
+            <span className="rounded-full bg-[#14181f] px-3 py-1.5 text-white">
+              {postTypeLabel(editorial.type)}
             </span>
-            {article.liveTime || "Just now"}
+            <Link
+              href={`/${article.category}`}
+              className="rounded-full border border-gray-300 px-3 py-1.5 text-[#4d535c] hover:border-black hover:text-black"
+            >
+              {categoryName}
+            </Link>
+          </div>
+
+          <h1 className="max-w-[22ch] font-serif text-[38px] font-bold leading-[1.06] tracking-[-0.025em] text-[#111318] sm:text-[58px]">
+            {article.title}
+          </h1>
+          <p className="mt-6 max-w-3xl font-serif text-xl leading-[1.55] text-[#50555e] sm:text-[23px]">
+            {article.description}
           </p>
-        </div>
-        <h1 className="my-4 font-sans text-3xl font-semibold leading-tight sm:text-[39px]">{article.title}</h1>
-        {article.heroCaption && <p className="mb-6 text-base leading-[30px]">{article.heroCaption}</p>}
-        <div className="mt-6 flex flex-wrap items-center justify-between gap-4">
-          <div className="flex items-center gap-2">
-            <img alt={article.author} className="h-[45px] w-[45px] rounded-full object-cover" src={authorImage} />
-            <div className="font-sans text-[11px] leading-snug text-[#505050]">
-              <Link href="/author" title={article.author} className="block text-black">
-                {article.author}
-              </Link>
-              <span>{article.dateDisplay}</span>
-            </div>
-          </div>
-          <div className="flex items-center gap-3">
-            <div className="flex gap-3">
-              <a
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-gray-300 text-black transition hover:bg-gray-100"
-                href={`https://www.facebook.com/sharer/sharer?u=${shareUrl}`}
-                target="_blank"
-                rel="noreferrer"
-                title="facebook"
-              >
-                <img alt="facebook" className="h-4 w-4" src="/image/facebook.png" />
-              </a>
-              <a
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-gray-300 text-black transition hover:bg-gray-100"
-                href={`https://twitter.com/intent/tweet?url=${shareUrl}&text=${encodeURIComponent(article.title)}`}
-                target="_blank"
-                rel="noreferrer"
-                title="twitter"
-              >
-                <img alt="twitter" className="h-4 w-4" src="/image/twitter.png" />
-              </a>
-              <a
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-gray-300 text-black transition hover:bg-gray-100"
-                href="https://substack.com/@policynow01"
-                title="substack"
-              >
-                <img alt="substack" className="h-4 w-4" src="/image/reddit.png" />
-              </a>
-              <a
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-gray-300 text-black transition hover:bg-gray-100"
-                href={`https://medium.com/new-story?source=${shareUrl}&title=${encodeURIComponent(article.title)}`}
-                target="_blank"
-                rel="noreferrer"
-                title="medium"
-              >
-                <img alt="medium" className="h-4 w-4" src="/image/medium.webp" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      <div className="mx-auto max-w-4xl px-6">
-        <img alt={article.title} className="h-[340px] w-full object-cover sm:h-[550px]" src={article.heroImage} />
-      </div>
-
-      <div className="mx-auto max-w-3xl px-6 py-10">
-        {article.content.map((block, i) =>
-          block.type === "h2" ? (
-            <h2 key={i} className="mb-4 mt-10 font-sans text-2xl font-semibold">
-              {block.text}
-            </h2>
-          ) : (
-            <Paragraph key={i} block={block} />
-          )
-        )}
-      </div>
-
-      {related.length > 0 && (
-        <section className="mx-6 py-8 lg:mx-12">
-          <h2 className="mb-5 border-t border-black pt-3 font-sans text-sm font-semibold uppercase">Related News</h2>
-          <div className="grid grid-cols-2 gap-x-3 gap-y-6 sm:grid-cols-3 lg:grid-cols-5">
-            {related.map((a) => (
-              <Link
-                className="block border-gray-300 pr-2 text-black last:border-r-0 lg:border-r"
-                href={`/${a.category}/${a.slug}`}
-                title="more"
-                key={a.id}
-              >
-                <div>
-                  <img alt={a.title} className="h-[150px] w-full object-cover" src={a.heroImage} />
+          <div className="mt-8 flex flex-col gap-5 border-y border-gray-200 py-5 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex items-center gap-3">
+              <img alt="" className="h-11 w-11 rounded-full object-cover" src={authorImage} />
+              <div className="font-sans text-xs leading-relaxed text-[#5c616a]">
+                <div className="font-semibold text-[#15171b]">
+                  Edited by <Link href={authorPath} className="hover:underline">{article.author}</Link>
                 </div>
-                <h3 className="my-2.5 font-sans text-sm font-semibold leading-tight text-[#161616]">{a.title}</h3>
-                <p className="font-sans text-[10px] text-gray-500">{a.dateDisplay}</p>
-              </Link>
-            ))}
+                <div>
+                  {article.date ? `Published ${formatDate(article.date)} · ` : ""}
+                  {editorial.readTimeMinutes || 1} min read
+                </div>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2 font-sans text-xs">
+              <span className="mr-1 text-[#70757d]">Share</span>
+              <a
+                className="rounded-full border border-gray-300 px-3 py-2 hover:border-black"
+                href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                Facebook
+              </a>
+              <a
+                className="rounded-full border border-gray-300 px-3 py-2 hover:border-black"
+                href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(article.title)}`}
+                target="_blank"
+                rel="noreferrer"
+              >
+                X
+              </a>
+            </div>
           </div>
-        </section>
-      )}
-    </div>
+        </header>
+
+        <figure className="mx-auto max-w-5xl px-4 sm:px-6">
+          <img
+            alt={article.title}
+            className="max-h-[650px] w-full bg-[#f1f0ed] object-cover"
+            src={article.heroImage}
+          />
+          {article.heroCaption && (
+            <figcaption className="mt-3 border-l-2 border-[#b3261e] pl-3 font-sans text-xs leading-relaxed text-[#666b73]">
+              {article.heroCaption}
+            </figcaption>
+          )}
+        </figure>
+
+        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-10 px-6 py-10 lg:grid-cols-[minmax(0,1fr)_270px] lg:py-14">
+          <article className="min-w-0 max-w-3xl">
+            {!sourceIdentified && (
+              <aside className="mb-8 border-l-4 border-[#9b1c1c] bg-[#fff2f2] px-5 py-4 font-sans text-sm leading-relaxed text-[#651313]">
+                <strong className="mr-1">Editorial review.</strong>
+                The original source record for this post is incomplete. It is excluded from search indexing until the source is verified.
+              </aside>
+            )}
+
+            {editorial.archiveWarning && (
+              <aside className="mb-8 border-l-4 border-[#b26a00] bg-[#fff8e8] px-5 py-4 font-sans text-sm leading-relaxed text-[#5f420e]">
+                <strong className="mr-1">Archive context.</strong>
+                {editorial.archiveWarning.replace(/^(Archive note|Archive context):\s*/i, "")}
+              </aside>
+            )}
+
+            {isPressRelease && (
+              <aside className="mb-8 border border-[#d9d4cc] bg-[#f7f5f1] px-5 py-4 font-sans text-sm leading-relaxed text-[#4c4a46]">
+                <strong className="block text-[#15171b]">Reader disclosure</strong>
+                This article is based on an organization or company announcement. Its claims have not been independently verified by PolicyNow.
+              </aside>
+            )}
+
+            {isSyndicated && (
+              <aside className="mb-8 border border-[#d9dde3] bg-[#f6f7f9] px-5 py-4 font-sans text-sm leading-relaxed text-[#4b515a]">
+                <strong className="block text-[#15171b]">Sourced post</strong>
+                This post is based on reporting from the organization identified in the source record. PolicyNow provides editorial review, context, and presentation; it does not claim to be the original reporting organization.
+              </aside>
+            )}
+
+            {startsMidThought(article) && (
+              <p className="mb-6 font-serif text-[19px] font-semibold leading-[1.7] text-[#22252a]">
+                {article.description}
+              </p>
+            )}
+
+            {(editorial.keyPoints || []).length > 0 && (
+              <section className="mb-10 rounded-sm border border-[#d9dde3] bg-[#f5f7f9] p-6">
+                <h2 className="font-sans text-xs font-bold uppercase tracking-[0.14em] text-[#22262c]">
+                  Key points
+                </h2>
+                <ul className="mt-4 space-y-3 pl-5 font-sans text-[15px] leading-relaxed text-[#3f444c] marker:text-[#b3261e]">
+                  {editorial.keyPoints.map((point) => (
+                    <li key={point}>{point}</li>
+                  ))}
+                </ul>
+              </section>
+            )}
+
+            {contentBlocks.map((block, index) => (
+              <StoryBlock block={block} key={index} />
+            ))}
+          </article>
+
+          <aside className="lg:sticky lg:top-6 lg:self-start">
+            <div className="border-t-2 border-[#14181f] py-5 font-sans">
+              <h2 className="text-xs font-bold uppercase tracking-[0.14em]">Reporting &amp; sourcing</h2>
+              <p className="mt-3 text-sm leading-relaxed text-[#555b64]">{source.note}</p>
+              {source.url && (
+                <a
+                  className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#8f211b] hover:underline"
+                  href={source.url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {sourceIdentified ? "View source record" : "Review source methodology"}{" "}
+                  <span aria-hidden="true">↗</span>
+                </a>
+              )}
+              {editorial.originalPublished && (
+                <dl className="mt-5 border-t border-gray-200 pt-4 text-xs leading-relaxed text-[#666b73]">
+                  <div>
+                    <dt className="font-semibold text-[#292c31]">Source publication</dt>
+                    <dd>{formatDate(editorial.originalPublished)}</dd>
+                  </div>
+                  {article.date && article.date !== editorial.originalPublished && (
+                    <div className="mt-3">
+                      <dt className="font-semibold text-[#292c31]">PolicyNow publication</dt>
+                      <dd>{formatDate(article.date)}</dd>
+                    </div>
+                  )}
+                </dl>
+              )}
+            </div>
+
+            <div className="border-t border-gray-300 py-5 font-sans text-sm leading-relaxed text-[#555b64]">
+              <h2 className="text-xs font-bold uppercase tracking-[0.14em] text-[#17191d]">
+                Accountability
+              </h2>
+              <p className="mt-3">See an error or missing context?</p>
+              <Link href="/corrections-policy" className="mt-2 inline-block font-semibold text-[#8f211b] hover:underline">
+                Read our corrections policy
+              </Link>
+            </div>
+          </aside>
+        </div>
+
+        {related.length > 0 && (
+          <section className="mx-auto max-w-6xl border-t border-gray-300 px-6 py-10">
+            <h2 className="mb-6 font-sans text-xs font-bold uppercase tracking-[0.14em]">More in {categoryName}</h2>
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {related.map((item) => (
+                <Link href={`/${item.category}/${item.slug}`} key={item.id} className="group">
+                  <img alt="" className="h-40 w-full object-cover" src={item.heroImage} />
+                  <div className="mt-3 text-[10px] font-bold uppercase tracking-wider text-[#8f211b]">
+                    {postTypeLabel(item.editorial?.type)}
+                  </div>
+                  <h3 className="mt-1 font-serif text-lg font-bold leading-snug group-hover:underline">
+                    {item.title}
+                  </h3>
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
+      </main>
     </>
   );
 }

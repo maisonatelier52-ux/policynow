@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import articles from "../data/articles";
+import { CATEGORY_LABELS, CATEGORY_ORDER } from "../lib/site";
 
 function getTodayDisplay() {
   const d = new Date();
@@ -15,24 +16,11 @@ function getTodayDisplay() {
 }
 
 function getNavCategories() {
-  const seen = new Map();
-  for (const a of articles) {
-    if (!seen.has(a.category)) seen.set(a.category, a.categoryLabel);
-  }
-  const order = [
-    "us",
-    "politics-and-policy",
-    "business-and-economy",
-    "global-affairs",
-    "technology-and-innovation",
-    "finance-and-markets",
-    "featured-pr",
-  ];
-  const ordered = order.filter((slug) => seen.has(slug)).map((slug) => ({ slug, label: seen.get(slug) }));
-  for (const [slug, label] of seen) {
-    if (!order.includes(slug)) ordered.push({ slug, label });
-  }
-  return ordered;
+  const available = new Set(articles.map((article) => article.category));
+  return CATEGORY_ORDER.filter((slug) => available.has(slug)).map((slug) => ({
+    slug,
+    label: CATEGORY_LABELS[slug],
+  }));
 }
 
 function getTickerItems() {
@@ -44,7 +32,6 @@ export default function Header() {
   const [ticker] = useState(getTickerItems);
   const [today, setToday] = useState("");
   const [menuOpen, setMenuOpen] = useState(false);
-  const [dark, setDark] = useState(false);
 
   useEffect(() => {
     setToday(getTodayDisplay());
@@ -61,12 +48,11 @@ export default function Header() {
 
   return (
     <>
-      {/* Breaking-news ticker */}
+      {/* Recent-posts ticker */}
       <div className="w-full overflow-hidden border-y border-gray-200 bg-white font-sans text-black">
         <div className="flex items-center">
           <div className="z-10 flex shrink-0 items-center gap-1.5 whitespace-nowrap bg-black px-4 py-2.5 text-[11px] font-semibold text-white">
-            <span className="text-xs">⚡</span>
-            <span>LATEST</span>
+            <span>RECENT POSTS</span>
           </div>
           <div className="flex min-w-0 flex-1 overflow-hidden">
             <div className="flex animate-[marquee_32s_linear_infinite] gap-4 whitespace-nowrap py-1.5 text-[13px] font-semibold">
@@ -103,14 +89,7 @@ export default function Header() {
             <img alt="Logo" className="h-11 w-auto" src="/image/policynow-logo.png" />
           </Link>
 
-          <button
-            type="button"
-            aria-label="Toggle theme"
-            onClick={() => setDark((d) => !d)}
-            className="flex h-7 w-7 items-center justify-center"
-          >
-            <img alt="theme" className="h-[0px] w-[0px]" src={dark ? "/image/dark-mode.svg" : "/image/light-mode.svg"} />
-          </button>
+         
         </div>
         <div className="text-center text-sm text-[#8a5a2a]">{today}</div>
       </div>
@@ -156,7 +135,7 @@ export default function Header() {
             href="/author"
             onClick={() => setMenuOpen(false)}
           >
-            Authors
+            Contributors
           </Link>
         </nav>
         <div className="flex gap-4 border-t border-gray-100 px-5 py-4">

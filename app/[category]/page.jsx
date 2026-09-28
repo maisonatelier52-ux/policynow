@@ -1,19 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import articles from "../../data/articles";
-
-const SITE_URL = "https://www.policynow.org";
-const SITE_NAME = "PolicyNow";
-
-const CATEGORY_LABELS = {
-  us: "U.S.",
-  "politics-and-policy": "Politics & Policy",
-  "business-and-economy": "Business & Economy",
-  "global-affairs": "Global Affairs",
-  "technology-and-innovation": "Technology & Innovation",
-  "finance-and-markets": "Finance & Markets",
-  "featured-pr": "Featured PR",
-};
+import { CATEGORY_LABELS, SITE_NAME, SITE_URL, TWITTER_HANDLE } from "../../lib/site";
 
 export function generateStaticParams() {
   return Object.keys(CATEGORY_LABELS).map((category) => ({ category }));
@@ -25,7 +13,7 @@ export async function generateMetadata({ params }) {
   if (!label) return {};
 
   const url = `${SITE_URL}/${category}`;
-  const description = `Latest ${label} news, analysis, and coverage from ${SITE_NAME} — where policy meets public perception.`;
+  const description = `${label} posts from ${SITE_NAME}, with analysis, context, transparent sourcing, and visible content labels.`;
 
   return {
     title: label,
@@ -43,8 +31,8 @@ export async function generateMetadata({ params }) {
       card: "summary_large_image",
       title: label,
       description,
-      site: "@policynow",
-      creator: "@policynow",
+      site: TWITTER_HANDLE,
+      creator: TWITTER_HANDLE,
     },
     robots: {
       index: true,
@@ -127,7 +115,7 @@ export default async function CategoryPage({ params }) {
 
       {list.length === 0 ? (
         <p className="py-10 font-sans text-gray-500">
-          No stories have been published in this section yet. Check back soon.
+          No posts have been published in this section yet. Check back soon.
         </p>
       ) : (
         <div className="grid grid-cols-1 gap-5 md:grid-cols-[3fr_1fr_1fr]">
@@ -229,20 +217,24 @@ export default async function CategoryPage({ params }) {
               <a className="text-lg" href="https://substack.com/@policynow01" title="substack">
                 <i className="fa-brands fa-youtube" />
               </a>
-              <a className="text-lg" href="mailto:hello@policynow.com" title="envelope">
+              <a className="text-lg" href="mailto:hello@policynow.org" title="envelope">
                 <i className="fa-solid fa-envelope" />
               </a>
             </div>
           </div>
           <div className="border-t border-black py-5">
-            <h4 className="mb-2.5 text-xs font-semibold">NEWSLETTER</h4>
-            <form className="border border-gray-300 p-4">
-              <input className="mb-2.5 w-full border border-gray-300 p-4 text-base" placeholder="Your name" type="text" />
-              <input className="mb-2.5 w-full border border-gray-300 p-4 text-base" placeholder="Your email address" type="email" />
-              <button className="w-full bg-black p-4 text-xs text-white hover:opacity-85" type="submit">
-                SIGN UP
-              </button>
-            </form>
+            <h4 className="mb-2.5 text-xs font-semibold">FOLLOW POLICY NOW</h4>
+            <p className="mb-3 text-sm leading-relaxed text-gray-600">
+              Read new analysis and explainers through our RSS feed, or contact the editorial team directly.
+            </p>
+            <div className="flex flex-col gap-2">
+              <a className="border border-black px-4 py-3 text-center text-xs font-semibold hover:bg-black hover:text-white" href="/rss.xml">
+                OPEN RSS FEED
+              </a>
+              <a className="bg-black px-4 py-3 text-center text-xs font-semibold text-white hover:opacity-85" href="mailto:hello@policynow.org?subject=PolicyNow%20reader%20updates">
+                EMAIL POLICY NOW
+              </a>
+            </div>
           </div>
         </aside>
       </div>

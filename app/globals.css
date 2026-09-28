@@ -2,7 +2,7 @@
 
 @theme {
   --font-sans: Arial, Helvetica, ui-sans-serif, sans-serif;
-  --font-serif: Georgia, "Times New Roman", serif;
+  /* --font-serif: Georgia, "Times New Roman", serif; */
   --color-brand-ink: #14181f;
   --color-brand-red: #b3261e;
   --color-brand-red-dark: #7a2419;
