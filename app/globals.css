@@ -40,3 +40,6 @@
 .border-black {
     border-color: rgb(224, 219, 219);
 }
+.distance{
+  justify-content: space-evenly;
+}

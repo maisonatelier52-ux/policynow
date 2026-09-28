@@ -73,7 +73,7 @@ export default function Header() {
 
       {/* Mobile top bar */}
       <div className="flex flex-col gap-2 border-y border-black px-5 py-3 lg:hidden">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center  distance">
           <button
             type="button"
             aria-label="Open menu"
