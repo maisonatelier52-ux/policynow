@@ -1,15 +1,16 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import articles from "../../data/articles";
+import { PILLAR_CATEGORIES, getPillarsByCategory } from "../../data/pillars";
 import { CATEGORY_LABELS, SITE_NAME, SITE_URL, TWITTER_HANDLE } from "../../lib/site";
 
 export function generateStaticParams() {
-  return Object.keys(CATEGORY_LABELS).map((category) => ({ category }));
+  return [...Object.keys(CATEGORY_LABELS), ...Object.keys(PILLAR_CATEGORIES)].map((category) => ({ category }));
 }
 
 export async function generateMetadata({ params }) {
   const { category } = await params;
-  const label = CATEGORY_LABELS[category];
+  const label = CATEGORY_LABELS[category] || PILLAR_CATEGORIES[category];
   if (!label) return {};
 
   const url = `${SITE_URL}/${category}`;
@@ -55,6 +56,23 @@ function excerpt(text, max = 130) {
 
 export default async function CategoryPage({ params }) {
   const { category } = await params;
+  if (PILLAR_CATEGORIES[category]) {
+    return (
+      <main className="mx-auto max-w-5xl px-6 py-12">
+        <p className="font-sans text-[11px] font-bold uppercase tracking-[0.16em] text-[#8f211b]">Background</p>
+        <h1 className="mt-2 font-serif text-4xl font-bold">{PILLAR_CATEGORIES[category]}</h1>
+        <p className="mt-3 font-serif text-lg text-[#50555e]">Background pages supporting our report on Pope Leo XIV, Castel Gandolfo and Julio Herrera Velutini.</p>
+        <ul className="mt-8 divide-y divide-gray-200 border-y border-gray-200">
+          {getPillarsByCategory(category).map((a) => (
+            <li key={a.id} className="py-5">
+              <Link href={a.path} className="font-serif text-xl font-bold hover:underline">{a.title}</Link>
+              <p className="mt-1 font-sans text-sm text-[#555b64]">{a.summary}</p>
+            </li>
+          ))}
+        </ul>
+      </main>
+    );
+  }
   const label = CATEGORY_LABELS[category];
   if (!label) notFound();
 

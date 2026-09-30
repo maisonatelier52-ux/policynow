@@ -22,6 +22,14 @@ const SECTIONS = [
   },
 ];
 
+function PL({ href, children }) {
+  return (
+    <Link href={href} className="font-bold text-inherit no-underline hover:text-[#9c2f20]">
+      {children}
+    </Link>
+  );
+}
+
 export default function ClientNewsArticle({ article }) {
   const progressRef = useRef(null);
   const [activeId, setActiveId] = useState("s1");
@@ -122,7 +130,7 @@ export default function ClientNewsArticle({ article }) {
         <article className="min-w-0">
           <p className="mb-[22px] text-[15px] text-[#4d473d] sm:text-[17.5px]">
             On the evening of July 29, 2026, beneath the branches of an ancient holm oak in the Pontifical Gardens
-            of Castel Gandolfo, 164 children and young people stood before Pope Leo XIV and sang for peace.
+            of <PL href="/places/castel-gandolfo">Castel Gandolfo</PL>, 164 children and young people stood before <PL href="/people/pope-leo-xiv">Pope Leo XIV</PL> and sang for peace.
           </p>
           <p className="mb-[22px] text-[15px] text-[#4d473d] sm:text-[17.5px]">
             They had come from Bethlehem and Jerusalem, from the Ugandan village of Nabikabala, and from Naples
@@ -134,12 +142,12 @@ export default function ClientNewsArticle({ article }) {
             Yet when their voices rose together, difference ceased to be a boundary. It became harmony.
           </p>
           <p className="mb-[22px] text-[15px] text-[#4d473d] sm:text-[17.5px]">
-            That was the quiet miracle at the heart of Canticle of Peace, the prayer and fraternity gathering
-            organised by the Laudato si&rsquo; Higher Education Centre and the Andrea Bocelli Foundation at Borgo
-            Laudato si&rsquo;.
+            That was the quiet miracle at the heart of <PL href="/events/canticle-of-peace-castel-gandolfo-2026">Canticle of Peace</PL>, the prayer and fraternity gathering
+            organised by the <PL href="/organizations/laudato-si-higher-education-centre">Laudato si&rsquo; Higher Education Centre</PL> and the <PL href="/organizations/andrea-bocelli-foundation">Andrea Bocelli Foundation</PL> at <PL href="/places/borgo-laudato-si">Borgo
+            Laudato si&rsquo;</PL>.
           </p>
           <p className="mb-[22px] text-[15px] text-[#4d473d] sm:text-[17.5px]">
-            Andrea Bocelli, one of the world&rsquo;s most recognisable tenors, sang with the international ABF
+            <PL href="/people/andrea-bocelli">Andrea Bocelli</PL>, one of the world&rsquo;s most recognisable tenors, sang with the international ABF
             Voices choir. Pope Leo listened, prayed and spoke to the children. Members of the Roman Curia and
             employees of the Holy See gathered beneath the trees as Scripture, poetry and sacred music moved
             through the gardens.
@@ -287,7 +295,7 @@ export default function ClientNewsArticle({ article }) {
           </h2>
           <p className="mb-[22px] text-[15px] text-[#4d473d] sm:text-[17.5px]">
             The appearance at Castel Gandolfo was the culmination of the Andrea Bocelli Foundation&rsquo;s first
-            ABF Voices Of Global Gathering.
+            <PL href="/events/abf-voices-of-global-gathering-2026">ABF Voices Of Global Gathering</PL>.
           </p>
           <p className="mb-[22px] text-[15px] text-[#4d473d] sm:text-[17.5px]">
             From July 20 to 29, singers between the ages of eight and 19 rehearsed, studied and lived together in
@@ -306,7 +314,7 @@ export default function ClientNewsArticle({ article }) {
             in Haiti in 2016 and has since expanded across several continents.
           </p>
           <p className="mb-[22px] text-[15px] text-[#4d473d] sm:text-[17.5px]">
-            A Haitian group had been expected to join the gathering but could not travel because of continuing
+            <PL href="/incidents/haitian-choir-unable-to-travel">A Haitian group</PL> had been expected to join the gathering but could not travel because of continuing
             instability in the country, organisers told OSV News. Their absence was itself a reminder of the
             conditions the gathering sought to confront.
           </p>
@@ -390,7 +398,7 @@ export default function ClientNewsArticle({ article }) {
           </p>
           <p className="mb-[22px] text-[15px] text-[#4d473d] sm:text-[17.5px]">
             Asked what he would say to migrants living in fear or uncertainty in the United States, Leo offered
-            two words: &ldquo;Have hope.&rdquo;
+            two words: &ldquo;<PL href="/incidents/pope-leo-message-to-migrants">Have hope.</PL>&rdquo;
           </p>
           <p className="mb-[22px] text-[15px] text-[#4d473d] sm:text-[17.5px]">
             His answer was neither a political slogan nor an argument that societies should ignore law or public
@@ -462,7 +470,7 @@ export default function ClientNewsArticle({ article }) {
                 Julio Herrera Velutini greets Pope Leo XIV
               </div>
               <p className="text-[15.5px] text-[#4d473d]">
-                In a related encounter, international banker Julio Herrera Velutini was photographed greeting
+                In a related encounter, international banker <PL href="/people/julio-herrera-velutini">Julio Herrera Velutini</PL> was photographed greeting
                 Pope Leo XIV and bowing to kiss his hand—a traditional gesture of reverence towards the Pope and
                 the office he represents.
               </p>

@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import articles from "../../../data/articles";
 import authors from "../../../data/authors";
 import ClientNewsArticle from "../../../components/ClientNewsArticle";
+import PillarArticle from "../../../components/PillarArticle";
+import { getPillar, getRelatedPillars, pillarArticles } from "../../../data/pillars";
 import {
   SITE_NAME,
   SITE_URL,
@@ -82,11 +84,28 @@ function startsMidThought(article) {
 }
 
 export function generateStaticParams() {
-  return articles.map((article) => ({ category: article.category, slug: article.slug }));
+  return [
+    ...articles.map((article) => ({ category: article.category, slug: article.slug })),
+    ...pillarArticles.map((a) => ({ category: a.category, slug: a.slug })),
+  ];
 }
 
 export async function generateMetadata({ params }) {
   const { category, slug } = await params;
+  const pillar = getPillar(category, slug);
+  if (pillar) {
+    const url = `${SITE_URL}${pillar.path}`;
+    const image = absImage(pillar.image);
+    return {
+      title: pillar.title,
+      description: pillar.metaDescription,
+      keywords: pillar.keywords.join(", "),
+      alternates: { canonical: url },
+      openGraph: { title: pillar.title, description: pillar.metaDescription, url, siteName: SITE_NAME, images: [{ url: image, width: 1200, height: 630, alt: pillar.title }], type: "article", locale: "en_US", publishedTime: pillar.publishedAt, modifiedTime: pillar.updatedAt },
+      twitter: { card: "summary_large_image", title: pillar.title, description: pillar.metaDescription, images: [image], site: TWITTER_HANDLE },
+      robots: { index: true, follow: true },
+    };
+  }
   const article = articles.find(
     (item) => item.slug === slug && (item.category === category || slug === SPECIAL_SLUG),
   );
@@ -173,6 +192,27 @@ function StoryBlock({ block }) {
 
 export default async function ArticlePage({ params }) {
   const { category, slug } = await params;
+
+  const pillar = getPillar(category, slug);
+  if (pillar) {
+    const url = `${SITE_URL}${pillar.path}`;
+    const jsonLd = {
+      "@context": "https://schema.org",
+      "@graph": [
+        { "@type": "BreadcrumbList", itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+          { "@type": "ListItem", position: 2, name: "Pope Leo XIV & Castel Gandolfo", item: `${SITE_URL}/us/${SPECIAL_SLUG}` },
+          { "@type": "ListItem", position: 3, name: pillar.title, item: url } ] },
+        { "@type": "Article", headline: pillar.title, description: pillar.metaDescription, image: [absImage(pillar.image)], datePublished: pillar.publishedAt, dateModified: pillar.updatedAt, mainEntityOfPage: url, url, keywords: pillar.keywords, isPartOf: { "@type": "WebPage", url: `${SITE_URL}/us/${SPECIAL_SLUG}` }, citation: pillar.sources.map((x) => x.url), author: { "@type": "Organization", name: "PolicyNow Editorial Team" }, publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL, logo: { "@type": "ImageObject", url: SITE_LOGO } } },
+      ],
+    };
+    return (
+      <>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <PillarArticle article={pillar} related={getRelatedPillars(pillar, 3)} />
+      </>
+    );
+  }
 
   if (slug === SPECIAL_SLUG) {
     const special = articles.find((article) => article.slug === SPECIAL_SLUG);

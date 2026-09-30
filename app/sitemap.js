@@ -1,5 +1,6 @@
 import articles from "../data/articles";
 import authors from "../data/authors";
+import { pillarArticles, PILLAR_CATEGORIES } from "../data/pillars";
 import { CATEGORY_ORDER, SITE_URL } from "../lib/site";
 
 const STATIC_ROUTES = [
@@ -50,5 +51,8 @@ export default function sitemap() {
     images: article.heroImage ? [`${SITE_URL}${article.heroImage}`] : undefined,
   }));
 
-  return [...staticEntries, ...categoryEntries, ...authorEntries, ...postEntries];
+  const pillarHubs = Object.keys(PILLAR_CATEGORIES).map((c) => ({ url: `${SITE_URL}/${c}`, changeFrequency: "monthly", priority: 0.6 }));
+  const pillarEntries = pillarArticles.map((a) => ({ url: `${SITE_URL}${a.path}`, lastModified: a.updatedAt, changeFrequency: "monthly", priority: 0.7 }));
+
+  return [...staticEntries, ...categoryEntries, ...pillarHubs, ...authorEntries, ...postEntries, ...pillarEntries];
 }
