@@ -380,7 +380,7 @@ export default async function ArticlePage({ params }) {
           )}
         </figure>
 
-        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-10 px-6 py-10 lg:grid-cols-[minmax(0,1fr)_270px] lg:py-14">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-6 py-10 lg:grid-cols-[minmax(0,1fr)_270px] lg:py-14">
           <article className="min-w-0 max-w-3xl">
             {!sourceIdentified && (
               <aside className="mb-8 border-l-4 border-[#9b1c1c] bg-[#fff2f2] px-5 py-4 font-sans text-sm leading-relaxed text-[#651313]">
