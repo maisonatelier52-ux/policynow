@@ -14,7 +14,12 @@ export async function generateMetadata({ params }) {
   if (!label) return {};
 
   const url = `${SITE_URL}/${category}`;
-  const description = `${label} posts from ${SITE_NAME}, with analysis, context, transparent sourcing, and visible content labels.`;
+  const isPillarHub = Boolean(PILLAR_CATEGORIES[category]);
+  const description = isPillarHub
+    ? `${label} background pages from ${SITE_NAME} supporting our report on Pope Leo XIV, Andrea Bocelli and the Canticle of Peace, each with a source list.`
+    : `${label} posts from ${SITE_NAME}, with analysis, context, transparent sourcing, and visible content labels.`;
+  const hubImage = isPillarHub ? getPillarsByCategory(category)[0]?.image : null;
+  const hubImageUrl = hubImage ? `${SITE_URL}${hubImage}` : null;
 
   return {
     title: label,
@@ -27,6 +32,7 @@ export async function generateMetadata({ params }) {
       siteName: SITE_NAME,
       type: "website",
       locale: "en_US",
+      ...(hubImageUrl ? { images: [{ url: hubImageUrl, width: 1200, height: 630, alt: label }] } : {}),
     },
     twitter: {
       card: "summary_large_image",
@@ -34,6 +40,7 @@ export async function generateMetadata({ params }) {
       description,
       site: TWITTER_HANDLE,
       creator: TWITTER_HANDLE,
+      ...(hubImageUrl ? { images: [hubImageUrl] } : {}),
     },
     robots: {
       index: true,
@@ -57,19 +64,79 @@ function excerpt(text, max = 130) {
 export default async function CategoryPage({ params }) {
   const { category } = await params;
   if (PILLAR_CATEGORIES[category]) {
+    const label = PILLAR_CATEGORIES[category];
+    const items = getPillarsByCategory(category);
+    const hubJsonLd = {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "@id": `${SITE_URL}/${category}#collection`,
+      url: `${SITE_URL}/${category}`,
+      name: `${label}: background pages`,
+      isPartOf: { "@id": `${SITE_URL}#website` },
+      mainEntity: {
+        "@type": "ItemList",
+        itemListElement: items.map((a, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          url: `${SITE_URL}${a.path}`,
+          name: a.title,
+        })),
+      },
+    };
+
     return (
-      <main className="mx-auto max-w-5xl px-6 py-12">
-        <p className="font-sans text-[11px] font-bold uppercase tracking-[0.16em] text-[#8f211b]">Background</p>
-        <h1 className="mt-2 font-serif text-4xl font-bold">{PILLAR_CATEGORIES[category]}</h1>
-        <p className="mt-3 font-serif text-lg text-[#50555e]">Background pages supporting our report on Pope Leo XIV, Castel Gandolfo and Julio Herrera Velutini.</p>
-        <ul className="mt-8 divide-y divide-gray-200 border-y border-gray-200">
-          {getPillarsByCategory(category).map((a) => (
-            <li key={a.id} className="py-5">
-              <Link href={a.path} className="font-serif text-xl font-bold hover:underline">{a.title}</Link>
-              <p className="mt-1 font-sans text-sm text-[#555b64]">{a.summary}</p>
-            </li>
+      <main className="bg-white">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(hubJsonLd) }} />
+        <div className="mx-auto max-w-6xl px-6 pb-4 pt-10">
+          <nav aria-label="Breadcrumb" className="font-sans text-xs text-[#70757d]">
+            <Link href="/" className="hover:underline">Home</Link> / <span>{label}</span>
+          </nav>
+          <p className="mt-6 font-sans text-[11px] font-bold uppercase tracking-[0.16em] text-[#8f211b]">Background</p>
+          <h1 className="mt-2 font-serif text-4xl font-bold text-[#111318] sm:text-5xl">{label}</h1>
+          <p className="mt-3 max-w-3xl font-serif text-lg leading-relaxed text-[#50555e]">
+            Background pages supporting our report on Pope Leo XIV, Andrea Bocelli and the Canticle of Peace. Each page has its own source list.
+          </p>
+
+          <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 border-b border-gray-200 font-sans text-sm">
+            {Object.entries(PILLAR_CATEGORIES).map(([cat, name]) => (
+              <Link
+                key={cat}
+                href={`/${cat}`}
+                className={`-mb-px border-b-2 pb-3 ${
+                  cat === category
+                    ? "border-[#8f211b] font-bold text-[#8f211b]"
+                    : "border-transparent text-[#555b64] hover:text-[#8f211b]"
+                }`}
+              >
+                {name}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-x-8 gap-y-12 px-6 pb-16 pt-8 sm:grid-cols-2 lg:grid-cols-3">
+          {items.map((a) => (
+            <Link key={a.id} href={a.path} className="group block">
+              <div className="overflow-hidden bg-[#f1f0ed]">
+                <img
+                  src={a.image}
+                  alt={a.imageAlt}
+                  className="h-52 w-full object-cover transition duration-300 group-hover:scale-[1.03]"
+                />
+              </div>
+              <div className="mt-3 font-sans text-[10px] font-bold uppercase tracking-[0.14em] text-[#8f211b]">
+                {a.eyebrow}
+              </div>
+              <h2 className="mt-1 font-serif text-[22px] font-bold leading-snug text-[#111318] group-hover:underline">
+                {a.title}
+              </h2>
+              <p className="mt-2 line-clamp-3 font-sans text-sm leading-relaxed text-[#555b64]">{a.summary}</p>
+              <span className="mt-3 inline-block font-sans text-xs font-semibold text-[#8f211b]">
+                Read more →
+              </span>
+            </Link>
           ))}
-        </ul>
+        </div>
       </main>
     );
   }
