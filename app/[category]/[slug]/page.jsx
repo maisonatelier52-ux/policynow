@@ -165,7 +165,7 @@ export async function generateMetadata({ params }) {
 
 function Paragraph({ block }) {
   return (
-    <p className="mb-6 font-serif text-[18px] leading-[1.75] text-[#282b30]">
+    <p className="mb-4 font-serif text-[18px] leading-[1.75] text-[#282b30]">
       {block.runs.map((run, index) =>
         run.break ? (
           <br key={index} />
