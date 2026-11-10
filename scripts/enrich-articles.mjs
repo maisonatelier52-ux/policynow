@@ -5,7 +5,7 @@ import { fileURLToPath } from "node:url";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const projectRoot = path.resolve(__dirname, "..");
 const articlesPath = path.join(projectRoot, "data", "articles.json");
-const reviewDate = "2026-11-09";
+const reviewDate = "2026-11-10";
 const googleNewsUrl = "https://news.google.com/rss/search?q=";
 const userAgent =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 " +
