@@ -16815,22 +16815,14 @@
     "category": "politics-and-policy",
     "categoryLabel": "Politics & Governance",
     "title": "US Universities Challenge Proposed $70,000 Fee for International Students",
-    "description": "The GENIUS Act sets initial guardrails and consumer protections for stablecoins, which are tied to assets like the U.S. dollar to reduce price volatility compared with other forms of cryptocurrency.",
+    "description": "A major debate is emerging across the American higher education sector after dozens of educational organisations urged the Department of Homeland Security (DHS) to withdraw a proposed fee increase targeting international students participating in the Optional Practical Training (OPT) programme.",
     "heroImage": "/image/article-illustrations/US-Universities.jpg",
     "heroCaption": "US Universities Challenge $70,000 OPT Fee Proposal",
     "date": "2026-11-10",
     "dateDisplay": "November 10, 2026",
     "author": "Maxine T. Warne",
     "content": [
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "A major debate is emerging across the American higher education sector after dozens of educational organisations urged the Department of Homeland Security (DHS) to withdraw a proposed fee increase targeting international students participating in the Optional Practical Training (OPT) programme.",
-            "bold": false
-          }
-        ]
-      },
+      
      
       {
         "type": "p",
