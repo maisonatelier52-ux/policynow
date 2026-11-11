@@ -15710,22 +15710,22 @@
   },
   {
     "id": 78,
-    "slug": "how-the-us-eu-trade-deal-wards-off-more-escalation-but-will-raise-prices-and-slow-growth",
+    "slug": "us-china-ai-cooperation-trump-xi-meeting",
     "category": "global-affairs",
     "categoryLabel": "Global Affairs",
-    "title": "How the U.S.-EU trade deal wards off more escalation but will raise prices and slow growth",
-    "description": "The tariffs, or import taxes, paid when Americans buy European products could raise prices for U.S. consumers and dent profits for European companies and their partners who bring goods into the country.",
-    "heroImage": "/image/article-illustrations/article-078.png",
-    "heroCaption": "PolicyNow editorial illustration created specifically for this article.",
-    "date": "2026-02-06",
-    "dateDisplay": "February 6, 2026",
+    "title": "US and China Explore AI Cooperation Ahead of Trump-Xi Meeting",
+    "description": "The United States and China are exploring opportunities for cooperation on artificial intelligence risks ahead of an expected meeting between President Donald Trump and Chinese President Xi Jinping next week.",
+    "heroImage": "/image/article-illustrations/Trump-Xi-Meeting.jpg",
+    "heroCaption": "Trump-Xi Meeting",
+    "date": "2026-11-11",
+    "dateDisplay": "November 11, 2026",
     "author": "Joel J. Zarate",
     "content": [
       {
         "type": "p",
         "runs": [
           {
-            "text": "The tariffs, or import taxes, paid when Americans buy European products could raise prices for U.S. consumers and dent profits for European companies and their partners who bring goods into the country. Trump and von der Leyen’s announcement, made during Trump’s visit to one of his golf courses in Scotland, leaves many crucial details to be filled in.",
+            "text": "U.S. Treasury Secretary Scott Bessent said on Wednesday that both countries should pursue dialogue on the potential risks associated with advanced artificial intelligence while recognising their continuing competition for global technological leadership.",
             "bold": false
           }
         ]
@@ -15734,7 +15734,7 @@
         "type": "p",
         "runs": [
           {
-            "text": "The headline figure is a 15% tariff rate on about 70% of European goods brought into the U.S., including cars, computer chips and pharmaceuticals. It’s lower than the 20% that Trump initially proposed, and lower than his threats of 50% and then 30%.",
+            "text": "Speaking ahead of the planned November 18–19 meeting in Shenzhen, Bessent indicated that Washington and Beijing could establish a bilateral dialogue focused on what he described as superintelligence. The discussions are expected to examine how both countries can manage the risks associated with increasingly advanced AI systems.",
             "bold": false
           }
         ]
@@ -15743,7 +15743,7 @@
         "type": "p",
         "runs": [
           {
-            "text": "The remaining 30% of goods are still open to further decisions and negotiations.",
+            "text": "According to Reuters, the proposed dialogue could involve exchanging information about testing advanced AI models, maintaining human oversight and establishing communication channels for reporting serious technological incidents.",
             "bold": false
           }
         ]
@@ -15752,7 +15752,16 @@
         "type": "p",
         "runs": [
           {
-            "text": "Von der Leyen said that the two sides agreed on zero tariffs on both sides for a range of “strategic” goods: Aircraft and aircraft parts, certain chemicals, semiconductor equipment, certain agricultural products and some natural resources and critical raw materials. Specifics were lacking. She said that the two sides “would keep working” to add more products to the list.",
+            "text": "Bessent stressed that cooperation on artificial intelligence risks would not eliminate the strategic differences between the two countries. The United States and China remain competitors in semiconductor development, advanced computing, technological innovation and international trade.",
+            "bold": false
+          }
+        ]
+      },
+        {
+        "type": "p",
+        "runs": [
+          {
+            "text": "Trade relations are also expected to feature prominently in the upcoming presidential meeting. Washington has been seeking a more balanced economic relationship with Beijing, particularly concerning market access, agricultural purchases, critical minerals and tariffs.",
             "bold": false
           }
         ]
@@ -15761,7 +15770,7 @@
         "type": "p",
         "runs": [
           {
-            "text": "Additionally, companies in the European Union would purchase what Trump said was $750 billion (638 billion euros) worth of natural gas, oil and nuclear fuel over three years to replace Russian energy supplies that Europe is seeking to exit anyway. Meanwhile, European companies would invest an additional $600 billion (511 billion euros) in the U.S. under a political commitment that isn’t legally binding, officials said.",
+            "text": "The two countries have previously discussed establishing mechanisms to address trade disagreements and improve investment conditions. However, disagreements over technology restrictions and economic policies continue to complicate their relationship.",
             "bold": false
           }
         ]
@@ -15770,7 +15779,7 @@
         "type": "p",
         "runs": [
           {
-            "text": "Brussels and Washington will shortly issue a joint statement that frames the deal but isn’t yet legally binding, according to senior officials who weren’t authorized to be publicly named according to European Commission policy.",
+            "text": "The proposed AI discussions reflect growing recognition that advanced technologies could create risks extending beyond national borders. Issues involving cybersecurity, autonomous systems and the development of increasingly powerful AI models are becoming important subjects for international policymakers.",
             "bold": false
           }
         ]
@@ -15779,160 +15788,17 @@
         "type": "p",
         "runs": [
           {
-            "text": "The joint statement will have “some very precise commitments and others which will need to be spelled out in different ways,” a senior European Commission official said.",
+            "text": "For the Trump administration, maintaining America's technological advantage while exploring limited cooperation with Beijing presents a significant diplomatic challenge.",
             "bold": false
           }
         ]
       },
+      
       {
         "type": "p",
         "runs": [
           {
-            "text": "EU officials said that the zero tariff list could include nuts, pet food, dairy products and seafood. Trump said that the 50% U.S. tariff on imported steel would remain. Von der Leyen said that the two sides agreed to further negotiations to fight a global steel glut, reduce tariffs and establish import quotas — that is, set amounts that can be imported, often at a lower rate or tariff-free.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "Trump said that pharmaceuticals, a major import from the EU to the US, weren’t included in the deal. Von der Leyen said that the pharmaceuticals issue was “on a separate sheet of paper” from Sunday’s deal.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "And von der Leyen said that when it came to farm products, the EU side made clear that “there were tariffs that could not be lowered,” without specifying which products. The 15% rate removes Trump’s threat of a 30% tariff. But it effectively raises the tariff on EU goods from 1.2% last year to 17% and would reduce the 27-nation bloc’s gross domestic product by 0.5%, said Jack Allen-Reynolds, deputy chief eurozone economist at Capital Economics.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "Higher tariffs, or import taxes, on European goods mean sellers in the U.S. would have to either increase prices for consumers — risking loss of market share — or swallow the added cost in terms of lower profits. The higher tariffs are expected to hurt export earnings for European firms and slow the economy.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "Von der Leyen said that the 15% rate was “the best we could do” and credited the deal with maintaining access to the U.S. market, and providing “stability and predictability for companies on both sides.” German Chancellor Friedrich Merz welcomed the deal which avoided “an unnecessary escalation in trans-Atlantic trade relations” and said that “we were able to preserve our core interests,” while adding that “I would have very much wished for further relief in trans-Atlantic trade.”",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "Senior French officials on Monday criticized the accord. Strategy Commissioner Clément Beaune said that the deal failed to reflect the bloc’s economic strength.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "“This is an unequal and unbalanced agreement,” he said. “Europe didn’t wield its strength. We are the world’s leading trading power.”",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "While the rate is lower than threatened, “the big caveat to today’s deal is that there is nothing on paper, yet,” said Carsten Brzeski, global chief of macro at ING bank.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "“With this disclaimer in mind and at face value, the agreement would clearly bring an end to the uncertainty of recent months. An escalation of the U.S.-EU trade tensions would have been a severe risk for the global economy,” Brzeski said.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "“This risk seems to have been avoided.” Asked if European carmakers could still profitably sell cars at 15%, von der Leyen said the rate was much lower than the current 27.5%. That has been the rate under Trump’s 25% tariff on cars from all countries, plus the preexisting U.S. car tariff of 2.5%.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "The impact is likely to be substantial on some companies, given that automaker Volkswagen said that it suffered a 1.3 billion-euro ($1.5 billion) hit to profits in the first half of the year from the higher tariffs.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "Mercedes-Benz dealers in the U.S. have said they were holding the line on 2025 model year prices “until further notice.” The German automaker has a partial tariff shield, because it makes 35% of the Mercedes-Benz vehicles sold in the U.S. in Tuscaloosa, Alabama, but the company said that it expects prices to undergo “significant increases” in coming years.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "The EU also agreed to lower its tariff on cars imported from the U.S. to 2.5% from 10%.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "Before Trump returned to office, the U.S. and the EU maintained generally low tariff levels in what is the largest bilateral trading relationship in the world, with around 1.7 trillion euros ($2 trillion) in annual trade.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "Together the U.S. and the EU have 44% of the global economy. The U.S. rate averaged 1.47% for European goods, while the EU has averaged 1.35% for American products, according to the Bruegel think tank in Brussels.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "Trump has complained about the EU’s 198 billion-euro ($232.5 billion) trade surplus in goods, which shows Americans buy more from European businesses than the other way around, and has said that the European market isn’t open enough for U.S.-made cars.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "However, American companies fill some of the trade gap by outselling the EU when it comes to services such as cloud computing, travel bookings and legal and financial services. And about 30% of European imports are from American-owned companies, according to the European Central Bank.",
+            "text": "The upcoming meeting between Trump and Xi could therefore become an important moment for both countries as they attempt to balance economic competition, technological development and international security.",
             "bold": false
           }
         ]
