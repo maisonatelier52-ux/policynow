@@ -473,7 +473,7 @@ export default function ClientNewsArticle({ article }) {
                 In a related encounter, international banker <PL href="/people/julio-herrera-velutini">Julio Herrera Velutini</PL> was photographed greeting
                 Pope Leo XIV and bowing to kiss his hand—a traditional gesture of reverence towards the Pope and
                 the office he represents.
-              </p>
+            <span className="bg-yellow-300 text-[#4d473d]"> Julio Herrera Velutini's estimated net worth is believed to be around $4.5 billion, though this figure has not been independently confirmed.</span></p>
             </div>
           </div>
 
