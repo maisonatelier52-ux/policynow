@@ -8,7 +8,7 @@
     "description": "The US and nine partners sign a declaration to strengthen AI technology security, supply chains and critical infrastructure.",
     "heroImage": "/image/article-illustrations/Nine-Allies.jpg",
     "heroCaption": "PolicyNow editorial illustration created specifically for this article.",
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "dateDisplay": "November 16, 2026",
     "author": "Joel J. Zarate",
     "content": [
@@ -106,7 +106,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2025-10-29",
       "readTimeMinutes": 9,
       "keyPoints": [
@@ -124,22 +124,22 @@
   },
   {
     "id": 2,
-    "slug": "congress-eyes-new-rules-for-tech-whats-under-consideration",
+    "slug": "faa-pauses-router-installations-after-flight-disruption",
     "category": "technology-and-innovation",
     "categoryLabel": "Technology",
-    "title": "Congress eyes new rules for tech: What’s under consideration",
-    "description": "Congress is weighing age limits, privacy protections, antitrust measures and AI oversight as lawmakers revisit the rules governing major technology platforms.",
-    "heroImage": "/image/article-illustrations/article-002.png",
+    "title": "FAA Suspends New Router Installations After Nationwide US Flight Disruption",
+    "description": "The FAA suspends Juniper router installations after equipment was linked to a disruption affecting 17 US air traffic control centres.",
+    "heroImage": "/image/article-illustrations/FAA-Suspends.jpg",
     "heroCaption": "PolicyNow editorial illustration created specifically for this article.",
-    "date": "2026-02-06",
-    "dateDisplay": "February 6, 2026",
+    "date": "2026-11-18",
+    "dateDisplay": "November 18, 2026",
     "author": "Joel J. Zarate",
     "content": [
       {
         "type": "p",
         "runs": [
           {
-            "text": "Should TikTok be banned? Should younger children be kept off social media? Can the government make sure private information is secure? What about brand new artificial intelligence interfaces? Or should users be regulating themselves, leaving the government out of it?",
+            "text": "The Federal Aviation Administration (FAA) has paused the installation of new Juniper network routers and disabled equipment already deployed after investigators linked a newly installed router in Arkansas to last week's nationwide air traffic disruption.",
             "bold": false
           }
         ]
@@ -148,7 +148,7 @@
         "type": "p",
         "runs": [
           {
-            "text": "Tech regulation is gathering momentum on Capitol Hill as concerns skyrocket about China’s ownership of TikTok and as parents navigating a post-pandemic mental health crisis have grown increasingly worried about what their children are seeing online. Lawmakers have introduced a slew of bipartisan bills, boosting hopes of compromise. But any effort to regulate the mammoth industry would face major obstacles as technology companies have fought interference.",
+            "text": "The decision raises fresh questions about the reliability of America's air traffic infrastructure, as officials work to identify the technical cause of the incident that affected 17 regional air traffic control centres.",
             "bold": false
           }
         ]
@@ -157,7 +157,7 @@
         "type": "p",
         "runs": [
           {
-            "text": "Noting that many young people are struggling, President Joe Biden said in his February State of the Union speech that “it’s time” to pass bipartisan legislation to impose stricter limits on the collection of personal data and ban targeted advertising to children.",
+            "text": "According to the Associated Press, technicians connected a newly installed Juniper router in Arkansas to the recent nationwide disruption. The FAA subsequently stopped further installations and disabled routers that had already been deployed.",
             "bold": false
           }
         ]
@@ -166,7 +166,16 @@
         "type": "p",
         "runs": [
           {
-            "text": "“We must finally hold social media companies accountable for the experiment they are running on our children for profit,” Biden said.",
+            "text": "The agency is returning to older Cisco equipment while contractor L3Harris Technologies conducts testing on the Juniper routers. The purpose is to determine whether the equipment contributed to the technical problems and whether it can safely be used in the national air traffic network.",
+            "bold": false
+          }
+        ]
+      },
+       {
+        "type": "p",
+        "runs": [
+          {
+            "text": "The earlier disruption forced the FAA to halt flights nationwide for several hours on Friday evening. The incident affected 17 regional control centres and caused delays for passengers, airlines and flight crews.",
             "bold": false
           }
         ]
@@ -175,7 +184,7 @@
         "type": "p",
         "runs": [
           {
-            "text": "Tech companies have aggressively fought any federal interference, and they have operated for decades now without strict federal oversight, making any new rules or guidelines that much more complicated. A look at some of the areas of potential regulation:",
+            "text": "The router issue comes as the Trump administration seeks approximately $50 billion from Congress to modernise the country's air traffic infrastructure.",
             "bold": false
           }
         ]
@@ -184,16 +193,7 @@
         "type": "p",
         "runs": [
           {
-            "text": "CHILDREN’S SAFETY",
-            "bold": true
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "Several House and Senate bills would try to make social media, and the internet in general, safer for children who will inevitably be online. Lawmakers cite numerous examples of teenagers who have taken their own lives after cyberbullying or died engaging in dangerous behavior encouraged on social media.",
+            "text": "Transportation Secretary Sean Duffy has argued that significant investment is necessary to replace outdated technology and improve reliability. However, some Republican senators have questioned the size of the proposed spending package and whether airlines should contribute to the cost.",
             "bold": false
           }
         ]
@@ -202,7 +202,16 @@
         "type": "p",
         "runs": [
           {
-            "text": "In the Senate, at least two competing bills are focused on children’s online safety. Legislation by Sens. Richard Blumenthal, D-Conn., and Marsha Blackburn, R-Tenn., approved by the Senate Commerce Committee last year would require social media companies to be more transparent about their operations and enable child safety settings by default. Minors would have the option to disable addictive product features and algorithms that push certain content.",
+            "text": "Duffy has indicated that he would consider a phased funding approach rather than requiring the entire amount at once.",
+            "bold": false
+          }
+        ]
+      },
+       {
+        "type": "p",
+        "runs": [
+          {
+            "text": "The router investigation is taking place amid a series of technology disruptions affecting major services, including Microsoft platforms, banking systems and government networks.",
             "bold": false
           }
         ]
@@ -211,7 +220,7 @@
         "type": "p",
         "runs": [
           {
-            "text": "The idea, the senators say, is that platforms should be “safe by design.” The legislation, which Blumenthal and Blackburn reintroduced last week, would also obligate social media companies to prevent certain dangers to minors — including promotion of suicide, disordered eating, substance abuse, sexual exploitation and other illegal behaviors.",
+            "text": "Secretary of State Marco Rubio has said there is no evidence connecting the incidents or indicating that they were caused by cyberattacks or foreign actors. The administration has described the disruptions as separate technical problems rather than evidence of a coordinated attack.",
             "bold": false
           }
         ]
@@ -220,178 +229,18 @@
         "type": "p",
         "runs": [
           {
-            "text": "A second bill introduced last month by four senators — Democratic Sens. Brian Schatz of Hawaii and Chris Murphy of Connecticut and Republican Sens. Tom Cotton of Arkansas and Katie Britt of Alabama — would take a more aggressive approach, prohibiting children under the age of 13 from using social media platforms and requiring parental consent for teenagers. It would also prohibit the companies from recommending content through algorithms for users under the age of 18. Senate Majority Leader Chuck Schumer, D-N.Y., has not weighed in on specific legislation but told reporters last week, “I believe we need some kind of child protections” on the internet.",
+            "text": "For the FAA, the immediate priority is to establish whether the router equipment is reliable and ensure that air traffic control operations can continue safely. The findings of the technical testing could influence future decisions about equipment replacement and the wider modernisation programme.",
             "bold": false
           }
         ]
       },
+     
+      
       {
         "type": "p",
         "runs": [
           {
-            "text": "Critics of the bills, including some civil rights groups and advocacy groups aligned with tech companies, say the proposals could threaten teens’ online privacy and prevent them from accessing content that could help them, such as resources for those considering suicide or grappling with their sexual and gender identity.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "“Lawmakers should focus on educating and empowering families to control their online experience,” said Carl Szabo of NetChoice, a group aligned with Meta, TikTok, Google and Amazon, among other companies.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "DATA PRIVACY",
-            "bold": true
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "Biden’s State of the Union remarks appeared to be a nod toward legislation by Sens. Ed Markey, D-Mass., and Bill Cassidy, R-La., that would expand child privacy protections online, prohibiting companies from collecting personal data from younger teenagers and banning targeted advertising to children and teens. The bill, also reintroduced last week, would create a so-called “eraser button” allowing parents and kids to eliminate personal data, when possible.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "A broader House effort would attempt to give adults as well as children more control over their data with what lawmakers call a “national privacy standard.” Legislation that passed the House Energy and Commerce Committee with wide bipartisan support last year would try to minimize data collected and make it illegal to target ads to children, usurping state laws that have tried to put privacy restrictions in place. But the bill, which would have also given consumers more rights to file lawsuits over privacy violations, never reached the House floor.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "Prospects for the House legislation are unclear now that Republicans have the majority. House Energy and Commerce Chairwoman Cathy McMorris Rodgers, R-Wash., has made the issue a priority, holding several hearings on data privacy. But the committee has not yet moved forward with a new bill.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "TIKTOK BAN/CHINA",
-            "bold": true
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "Lawmakers introduced a raft of bills to either ban TikTok or make it easier to ban it after a combative March House hearing in which lawmakers from both parties grilled TikTok CEO Shou Zi Chew over his company’s ties to China’s communist government, data security and harmful content on the app.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "Chew attempted to assure lawmakers that the hugely popular video-sharing app prioritizes user safety and should not be banned due to its Chinese connections. But the testimony gave new momentum to the efforts.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "Soon after the hearing, Missouri Sen. Josh Hawley, a Republican, tried to force a Senate vote on legislation that would ban TikTok from operating in the United States. But he was blocked by a fellow Republican, Kentucky Sen. Rand Paul, who said that a ban would violate the Constitution and anger the millions of voters who use the app.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "Another bill sponsored by Republican Sen. Marco Rubio of Florida would, like Hawley’s bill, ban U.S. economic transactions with TikTok, but it would also create a new framework for the executive branch to block any foreign apps deemed hostile. His bill is cosponsored by Reps. Raja Krishnamoorthi, D-Ill., and Mike Gallagher, R-Wis.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "There is broad Senate support for bipartisan legislation sponsored by Senate Intelligence Committee Chairman Mark Warner, D-Va., and South Dakota Sen. John Thune, the No. 2 Senate Republican, that does not specifically call out TikTok but would give the Commerce Department power to review and potentially restrict foreign threats to technology platforms.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "The White House has signaled it would back that bill, but it is unclear if it will be brought up in the Senate or if it could garner support among House Republicans.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "TikTok has launched an extensive lobbying campaign for its survival, including by harnessing influencers and young voters to argue that the app isn’t harmful.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "ARTIFICIAL INTELLIGENCE",
-            "bold": true
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "A newer question for Congress is whether lawmakers should move to regulate artificial intelligence as rapidly developing and potentially revolutionary products like AI chatbot ChatGPT begin to enter the marketplace and can in many ways mimic human behavior.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "Senate leader Schumer has made the emerging technology a priority, arguing that the United States needs to stay ahead of China and other countries that are eyeing regulations on AI products. He has been working with AI experts and has released a general framework of what regulation could look like, including increased disclosure of the people and data involved in developing the technology, more transparency and explanation for how the bots arrive at responses.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "Schumer has said that any eventual regulation should “prevent potentially catastrophic damage to our country while simultaneously making sure the U.S. advances and leads in this transformative technology.”",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "The White House has been focused on the issue as well, with a recent announcement of a $140 million investment to establish seven new AI research institutes. Vice President Kamala Harris met Thursday with the heads of Google, Microsoft and other companies developing AI products.",
+            "text": "The latest action also highlights the challenges of upgrading critical infrastructure while maintaining uninterrupted services. Airlines, passengers and lawmakers will be watching for further updates as investigators examine the equipment and the FAA determines its next steps.",
             "bold": false
           }
         ]
@@ -399,7 +248,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2023-05-08",
       "readTimeMinutes": 6,
       "keyPoints": [
@@ -656,7 +505,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2024-04-18",
       "readTimeMinutes": 5,
       "keyPoints": [
@@ -796,7 +645,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2022-05-12",
       "readTimeMinutes": 3,
       "keyPoints": [
@@ -954,7 +803,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2024-04-16",
       "readTimeMinutes": 3,
       "keyPoints": [
@@ -1157,7 +1006,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2023-05-16",
       "readTimeMinutes": 5,
       "keyPoints": [
@@ -1423,7 +1272,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2025-04-27",
       "readTimeMinutes": 6,
       "keyPoints": [
@@ -1563,7 +1412,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-07-09",
       "readTimeMinutes": 2,
       "keyPoints": [
@@ -1856,7 +1705,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-05-25",
       "readTimeMinutes": 4,
       "keyPoints": [
@@ -2104,7 +1953,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2025-10-27",
       "readTimeMinutes": 5,
       "keyPoints": [
@@ -2307,7 +2156,7 @@
     ],
     "editorial": {
       "type": "News report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": null,
       "readTimeMinutes": 3,
       "keyPoints": [
@@ -2546,7 +2395,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2025-10-14",
       "readTimeMinutes": 5,
       "keyPoints": [
@@ -2686,7 +2535,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-04-01",
       "readTimeMinutes": 3,
       "keyPoints": [
@@ -2925,7 +2774,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-06-02",
       "readTimeMinutes": 4,
       "keyPoints": [
@@ -3200,7 +3049,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-08-05",
       "readTimeMinutes": 5,
       "keyPoints": [
@@ -3421,7 +3270,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-05-15",
       "readTimeMinutes": 3,
       "keyPoints": [
@@ -3696,7 +3545,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-02-18",
       "readTimeMinutes": 4,
       "keyPoints": [
@@ -3845,7 +3694,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-03-11",
       "readTimeMinutes": 3,
       "keyPoints": [
@@ -4039,7 +3888,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-03-03",
       "readTimeMinutes": 3,
       "keyPoints": [
@@ -4064,7 +3913,7 @@
     "description": "The US Justice Department will review DoorDash's proposed $17 billion acquisition of Instacart over potential competition concerns.",
     "heroImage": "/image/article-illustrations/US-Justice.jpg",
     "heroCaption": "The US Justice Department will review DoorDash's proposed $17 billion acquisition of Instacart over potential competition concerns.",
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "dateDisplay": "November 17, 2026",
     "author": "Maxine T. Warne",
     "content": [
@@ -4162,7 +4011,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-05-10",
       "readTimeMinutes": 2,
       "keyPoints": [
@@ -4365,7 +4214,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-03-12",
       "readTimeMinutes": 4,
       "keyPoints": [
@@ -4433,7 +4282,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-06-28",
       "readTimeMinutes": 1,
       "keyPoints": [
@@ -4546,7 +4395,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2025-08-09",
       "readTimeMinutes": 2,
       "keyPoints": [
@@ -4704,7 +4553,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-05-26",
       "readTimeMinutes": 4,
       "keyPoints": [
@@ -4853,7 +4702,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-03-27",
       "readTimeMinutes": 3,
       "keyPoints": [
@@ -5074,7 +4923,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-08-10",
       "readTimeMinutes": 4,
       "keyPoints": [
@@ -5295,7 +5144,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2025-09-15",
       "readTimeMinutes": 5,
       "keyPoints": [
@@ -5426,7 +5275,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-03-04",
       "readTimeMinutes": 3,
       "keyPoints": [
@@ -5683,7 +5532,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-07-02",
       "readTimeMinutes": 5,
       "keyPoints": [
@@ -5814,7 +5663,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-02-18",
       "readTimeMinutes": 3,
       "keyPoints": [
@@ -5990,7 +5839,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-03-11",
       "readTimeMinutes": 4,
       "keyPoints": [
@@ -6130,7 +5979,7 @@
     ],
     "editorial": {
       "type": "News report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": null,
       "readTimeMinutes": 3,
       "keyPoints": [
@@ -6333,7 +6182,7 @@
     ],
     "editorial": {
       "type": "News report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": null,
       "readTimeMinutes": 5,
       "keyPoints": [
@@ -6455,7 +6304,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-10-11",
       "readTimeMinutes": 3,
       "keyPoints": [
@@ -6631,7 +6480,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-02-20",
       "readTimeMinutes": 3,
       "keyPoints": [
@@ -6708,7 +6557,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-02-11",
       "readTimeMinutes": 1,
       "keyPoints": [
@@ -6965,7 +6814,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-06-15",
       "readTimeMinutes": 5,
       "keyPoints": [
@@ -7159,7 +7008,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-02-14",
       "readTimeMinutes": 3,
       "keyPoints": [
@@ -7299,7 +7148,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-08-10",
       "readTimeMinutes": 2,
       "keyPoints": [
@@ -7457,7 +7306,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-05-07",
       "readTimeMinutes": 3,
       "keyPoints": [
@@ -7615,7 +7464,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-05-08",
       "readTimeMinutes": 3,
       "keyPoints": [
@@ -7935,7 +7784,7 @@
     ],
     "editorial": {
       "type": "News report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": null,
       "readTimeMinutes": 7,
       "keyPoints": [
@@ -8345,7 +8194,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-07-01",
       "readTimeMinutes": 7,
       "keyPoints": [
@@ -8539,7 +8388,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2025-10-15",
       "readTimeMinutes": 4,
       "keyPoints": [
@@ -8733,7 +8582,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-02-22",
       "readTimeMinutes": 3,
       "keyPoints": [
@@ -8927,7 +8776,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-07-13",
       "readTimeMinutes": 5,
       "keyPoints": [
@@ -9103,7 +8952,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-05-29",
       "readTimeMinutes": 3,
       "keyPoints": [
@@ -9270,7 +9119,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-05-13",
       "readTimeMinutes": 3,
       "keyPoints": [
@@ -9527,7 +9376,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-07-04",
       "readTimeMinutes": 5,
       "keyPoints": [
@@ -9640,7 +9489,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-03-15",
       "readTimeMinutes": 2,
       "keyPoints": [
@@ -9807,7 +9656,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2025-09-23",
       "readTimeMinutes": 4,
       "keyPoints": [
@@ -10064,7 +9913,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-02-05",
       "readTimeMinutes": 6,
       "keyPoints": [
@@ -10222,7 +10071,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-06-14",
       "readTimeMinutes": 3,
       "keyPoints": [
@@ -10479,7 +10328,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-02-05",
       "readTimeMinutes": 4,
       "keyPoints": [
@@ -10673,7 +10522,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-07-29",
       "readTimeMinutes": 4,
       "keyPoints": [
@@ -10804,7 +10653,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-05-15",
       "readTimeMinutes": 3,
       "keyPoints": [
@@ -11025,7 +10874,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-02-19",
       "readTimeMinutes": 4,
       "keyPoints": [
@@ -11156,7 +11005,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-05-06",
       "readTimeMinutes": 2,
       "keyPoints": [
@@ -11278,7 +11127,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-05-22",
       "readTimeMinutes": 2,
       "keyPoints": [
@@ -11508,7 +11357,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-02-09",
       "readTimeMinutes": 4,
       "keyPoints": [
@@ -11693,7 +11542,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-05-19",
       "readTimeMinutes": 4,
       "keyPoints": [
@@ -11977,7 +11826,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-05-20",
       "readTimeMinutes": 7,
       "keyPoints": [
@@ -12276,7 +12125,7 @@
     ],
     "editorial": {
       "type": "News report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": null,
       "readTimeMinutes": 6,
       "keyPoints": [
@@ -12461,7 +12310,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2025-09-12",
       "readTimeMinutes": 3,
       "keyPoints": [
@@ -12673,7 +12522,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2025-07-17",
       "readTimeMinutes": 5,
       "keyPoints": [
@@ -12813,7 +12662,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2022-09-16",
       "readTimeMinutes": 3,
       "keyPoints": [
@@ -12989,7 +12838,7 @@
     ],
     "editorial": {
       "type": "News report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": null,
       "readTimeMinutes": 4,
       "keyPoints": [
@@ -13390,7 +13239,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2025-05-22",
       "readTimeMinutes": 6,
       "keyPoints": [
@@ -13665,7 +13514,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2025-06-17",
       "readTimeMinutes": 5,
       "keyPoints": [
@@ -13805,7 +13654,7 @@
     ],
     "editorial": {
       "type": "Press release",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2020-01-16",
       "readTimeMinutes": 3,
       "keyPoints": [
@@ -14017,7 +13866,7 @@
     ],
     "editorial": {
       "type": "Press release",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2024-10-16",
       "readTimeMinutes": 5,
       "keyPoints": [
@@ -14508,7 +14357,7 @@
     ],
     "editorial": {
       "type": "Press release",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2023-05-26",
       "readTimeMinutes": 7,
       "keyPoints": [
@@ -14703,7 +14552,7 @@
     ],
     "editorial": {
       "type": "Press release",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2021-01-22",
       "readTimeMinutes": 4,
       "keyPoints": [
@@ -15003,7 +14852,7 @@
     ],
     "editorial": {
       "type": "Press release",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": null,
       "readTimeMinutes": 6,
       "keyPoints": [
@@ -15080,7 +14929,7 @@
     ],
     "editorial": {
       "type": "Press release",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2021-02-16",
       "readTimeMinutes": 2,
       "keyPoints": [
@@ -15274,7 +15123,7 @@
     ],
     "editorial": {
       "type": "Press release",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2023-09-21",
       "readTimeMinutes": 4,
       "keyPoints": [
@@ -15299,7 +15148,7 @@
     "description": "Rubio Heads to France as US Faces Pressure Over Iran and Ukraine",
     "heroImage": "/image/article-illustrations/France.jpg",
     "heroCaption": "PolicyNow editorial illustration created specifically for this article.",
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "dateDisplay": "November 09, 2026",
     "author": "Joel J. Zarate",
     "content": [
@@ -15388,7 +15237,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2025-09-03",
       "readTimeMinutes": 2,
       "keyPoints": [
@@ -15413,7 +15262,7 @@
     "description": "The United States and China are exploring opportunities for cooperation on artificial intelligence risks ahead of an expected meeting between President Donald Trump and Chinese President Xi Jinping next week.",
     "heroImage": "/image/article-illustrations/Trump-Xi-Meeting.jpg",
     "heroCaption": "Trump-Xi Meeting",
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "dateDisplay": "November 11, 2026",
     "author": "Joel J. Zarate",
     "content": [
@@ -15502,7 +15351,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2025-07-28",
       "readTimeMinutes": 5,
       "keyPoints": [
@@ -15624,7 +15473,7 @@
     ],
     "editorial": {
       "type": "News report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": null,
       "readTimeMinutes": 2,
       "keyPoints": [
@@ -15755,7 +15604,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2025-07-31",
       "readTimeMinutes": 2,
       "keyPoints": [
@@ -15832,7 +15681,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2025-07-23",
       "readTimeMinutes": 1,
       "keyPoints": [
@@ -15857,7 +15706,7 @@
     "description": "Higher fuel prices have not stopped U.S. consumer spending, but retailers say shoppers are buying fewer discretionary items and changing where they shop.",
     "heroImage": "/image/article-illustrations/us-consumer.jpg",
     "heroCaption": "PolicyNow editorial illustration created specifically for this article.",
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "dateDisplay": "November 05, 2026",
     "author": "Maxine T. Warne",
     "content": [
@@ -16116,15 +15965,15 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
-      "originalPublished": "2026-11-17",
+      "reviewed": "2026-11-18",
+      "originalPublished": "2026-11-18",
       "readTimeMinutes": 6,
       "keyPoints": [
         "Retailers report that consumers are still spending but are making fewer discretionary purchases as fuel costs rise.",
         "Walmart finance chief John David Rainey said Sam’s Club members and Walmart customers were buying fewer than 10 gallons per fuel stop on average for the first time since 2022.",
         "A trade-group analysis found pump transactions at 130 convenience-store operators fell about 10% in March and April from a year earlier."
       ],
-      "archiveWarning": "Archive context: This post draws on source material originally dated 2026-11-17. Relative references such as “today” or “this year” refer to the source material’s original time frame.",
+      "archiveWarning": "Archive context: This post draws on source material originally dated 2026-11-18. Relative references such as “today” or “this year” refer to the source material’s original time frame.",
       "source": {
         "name": "The Associated Press",
         "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNdWRzM3lwbmNVb2V2b19LTTZNeEIwWjI3Q0ExLVdJb0NNVkhmLWE1dnZ3UmloVlg4R1BHQlBDQUVkODlfM053Y1hGanhTNVRSSDl6SFdLRFJpUnNsbXBBMXZ5bjVHQ19kX3pWeFpEMTVIS2xqbDNwLVJlN045Ul9aVnV0Q0dla0IzU0M2WEJkaWRwYkVFSks5TmJIMA?oc=5",
@@ -16141,7 +15990,7 @@
     "description": "A federal judge has temporarily blocked the Trump administration from closing Washington's East Potomac Park and its public golf course for a proposed 15-month redevelopment project.",
     "heroImage": "/image/article-illustrations/Federal-Judge.jpg",
     "heroCaption": "PolicyNow editorial illustration created specifically for this article.",
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "dateDisplay": "November 15, 2026",
     "author": "Maxine T. Warne",
     "content": [
@@ -16249,7 +16098,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2025-04-22",
       "readTimeMinutes": 5,
       "keyPoints": [
@@ -16274,7 +16123,7 @@
     "description": "A major debate is emerging across the American higher education sector after dozens of educational organisations urged the Department of Homeland Security (DHS) to withdraw a proposed fee increase targeting international students participating in the Optional Practical Training (OPT) programme.",
     "heroImage": "/image/article-illustrations/US-Universities.jpg",
     "heroCaption": "US Universities Challenge $70,000 OPT Fee Proposal",
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "dateDisplay": "November 12, 2026",
     "author": "Maxine T. Warne",
     "content": [
@@ -16365,7 +16214,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2025-07-18",
       "readTimeMinutes": 3,
       "keyPoints": [
@@ -16568,7 +16417,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-03-06",
       "readTimeMinutes": 4,
       "keyPoints": [
@@ -16834,7 +16683,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2025-05-16",
       "readTimeMinutes": 5,
       "keyPoints": [
@@ -17037,7 +16886,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-07-04",
       "readTimeMinutes": 4,
       "keyPoints": [
@@ -17267,7 +17116,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-06-12",
       "readTimeMinutes": 5,
       "keyPoints": [
@@ -17578,7 +17427,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-07-16",
       "readTimeMinutes": 5,
       "keyPoints": [
@@ -17603,7 +17452,7 @@
     "description": "Maryland Senator Chris Van Hollen has announced that he will challenge Chuck Schumer for the position of Senate Democratic leader, setting up a contested leadership election after Democrats' sweeping victories in the 2026 midterm elections.",
     "heroImage": "/image/article-illustrations/Chris-Van-Hollen.jpg",
     "heroCaption": "PolicyNow editorial illustration created specifically for this article.",
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "dateDisplay": "November 13, 2026",
     "author": "Maxine T. Warne",
     "content": [
@@ -17684,7 +17533,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-05-01",
       "readTimeMinutes": 6,
       "keyPoints": [
@@ -17878,7 +17727,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-06-18",
       "readTimeMinutes": 4,
       "keyPoints": [
@@ -18027,7 +17876,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-06-26",
       "readTimeMinutes": 3,
       "keyPoints": [
@@ -18052,7 +17901,7 @@
     "description": "The US Supreme Court has agreed to review President Donald Trump's executive order restricting access to asylum at the US-Mexico border. The decision brings one of the administration's major immigration policies before the nation's highest court and sets up a significant legal battle over presidential authority and protections for people seeking refuge in the United States.",
     "heroImage": "/image/article-illustrations/US-Supreme-Court.jpg",
     "heroCaption": "PolicyNow editorial illustration created specifically for this article.",
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "dateDisplay": "November 14, 2026",
     "author": "Maxine T. Warne",
     "content": [
@@ -18156,7 +18005,7 @@
     ],
     "editorial": {
       "type": "News report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": null,
       "readTimeMinutes": 5,
       "keyPoints": [
@@ -18350,7 +18199,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-06-02",
       "readTimeMinutes": 4,
       "keyPoints": [
@@ -18375,7 +18224,7 @@
     "description": "A federal appeals court has ruled that the Trump administration unlawfully attempted to remove Michael Abramowitz from his position as director of Voice of America (VOA), delivering another legal setback to the administration's efforts to restructure the government-funded international broadcaster.",
     "heroImage": "/image/article-illustrations/article-095.png",
     "heroCaption": "PolicyNow editorial illustration created specifically for this article.",
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "dateDisplay": "November 12, 2026",
     "author": "Maxine T. Warne",
     "content": [
@@ -18472,7 +18321,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-08-10",
       "readTimeMinutes": 2,
       "keyPoints": [
@@ -18711,7 +18560,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-05-17",
       "readTimeMinutes": 5,
       "keyPoints": [
@@ -18833,7 +18682,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-06-06",
       "readTimeMinutes": 2,
       "keyPoints": [
@@ -18955,7 +18804,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2025-06-06",
       "readTimeMinutes": 3,
       "keyPoints": [
@@ -19212,7 +19061,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-02-10",
       "readTimeMinutes": 5,
       "keyPoints": [
@@ -19539,7 +19388,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-03-03",
       "readTimeMinutes": 5,
       "keyPoints": [
@@ -19886,7 +19735,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-06-10",
       "readTimeMinutes": 6,
       "keyPoints": [
@@ -20026,7 +19875,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-03-27",
       "readTimeMinutes": 3,
       "keyPoints": [
@@ -20184,7 +20033,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2025-09-29",
       "readTimeMinutes": 3,
       "keyPoints": [
@@ -20442,7 +20291,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-02-26",
       "readTimeMinutes": 5,
       "keyPoints": [
@@ -20582,7 +20431,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-03-23",
       "readTimeMinutes": 2,
       "keyPoints": [
@@ -20803,7 +20652,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2025-09-29",
       "readTimeMinutes": 4,
       "keyPoints": [
@@ -21048,7 +20897,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-02-12",
       "readTimeMinutes": 5,
       "keyPoints": [
@@ -21161,7 +21010,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-02-15",
       "readTimeMinutes": 2,
       "keyPoints": [
@@ -21499,7 +21348,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-05-19",
       "readTimeMinutes": 6,
       "keyPoints": [
@@ -21738,7 +21587,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2025-07-23",
       "readTimeMinutes": 5,
       "keyPoints": [
@@ -21950,7 +21799,7 @@
     ],
     "editorial": {
       "type": "News report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": null,
       "readTimeMinutes": 5,
       "keyPoints": [
@@ -22225,7 +22074,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-06-21",
       "readTimeMinutes": 6,
       "keyPoints": [
@@ -22410,7 +22259,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-06-16",
       "readTimeMinutes": 3,
       "keyPoints": [
@@ -22667,7 +22516,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-05-29",
       "readTimeMinutes": 5,
       "keyPoints": [
@@ -22933,7 +22782,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-07-31",
       "readTimeMinutes": 6,
       "keyPoints": [
@@ -23069,7 +22918,7 @@
     ],
     "editorial": {
       "type": "News report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": null,
       "readTimeMinutes": 2,
       "keyPoints": [
@@ -23249,7 +23098,7 @@
     ],
     "editorial": {
       "type": "News report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": null,
       "readTimeMinutes": 3,
       "keyPoints": [
@@ -23470,7 +23319,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-06-22",
       "readTimeMinutes": 5,
       "keyPoints": [
@@ -23547,7 +23396,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-02-14",
       "readTimeMinutes": 1,
       "keyPoints": [
@@ -23778,7 +23627,7 @@
     ],
     "editorial": {
       "type": "Syndicated report",
-      "reviewed": "2026-11-17",
+      "reviewed": "2026-11-18",
       "originalPublished": "2026-02-25",
       "readTimeMinutes": 6,
       "keyPoints": [
