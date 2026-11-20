@@ -16869,211 +16869,87 @@
   },
   {
     "id": 88,
-    "slug": "key-us-surveillance-program-set-to-expire-what-it-means",
+    "slug": "us-senate-passes-infrastructure-bill",
     "category": "politics-and-policy",
     "categoryLabel": "Politics & Governance",
-    "title": "A key U.S. government surveillance program is set to expire. A look at what that means",
-    "description": "A major surveillance tool considered essential for stopping terror attacks and arresting foreign spies is poised to expire Friday after bipartisan congressional attempts to temporarily extend it failed.",
-    "heroImage": "/image/article-illustrations/article-088.png",
+    "title": "US Senate Passes Bipartisan Infrastructure Bill, Sending Measure to House",
+    "description": "The US Senate passes a bipartisan infrastructure bill 62-33, advancing energy project reforms and new data-centre grid cost rules.",
+    "heroImage": "/image/article-illustrations/congress.jpg",
     "heroCaption": "PolicyNow editorial illustration created specifically for this article.",
-    "date": "2026-06-12",
-    "dateDisplay": "June 12, 2026",
+    "date": "2026-11-20",
+    "dateDisplay": "November 20, 2026",
     "author": "Maxine T. Warne",
     "content": [
       {
         "type": "p",
         "runs": [
           {
-            "text": "A major surveillance tool considered essential for stopping terror attacks and arresting foreign spies is poised to expire Friday after bipartisan congressional attempts to temporarily extend it failed.",
+            "text": "The United States Senate has approved a major bipartisan infrastructure and energy permitting bill, advancing legislation designed to speed up the approval of large construction and energy projects. The Bipartisan American Affordability and Jobs Act passed with 62 votes in favour and 33 against, marking an important development in the country's infrastructure and energy policy debate.",
             "bold": false
           }
         ]
       },
-      {
+        {
         "type": "p",
         "runs": [
           {
-            "text": "It is a major setback for the program known as Section 702, and even as President Donald Trump nominates a new national intelligence director more acceptable to Republicans and Democrats than his first pick, it is not clear how soon lawmakers, who are about to go on recess, would be able to revive the spy program.",
+            "text": "The legislation now moves to the Republican-controlled House of Representatives. President Donald Trump has indicated that he would sign the bill if it passes the House. The proposal has been under development for approximately four years and was advanced by lawmakers seeking to address delays affecting major infrastructure projects.",
             "bold": false
           }
         ]
       },
-      {
+        {
         "type": "p",
         "runs": [
           {
-            "text": "But there may not be an immediate drop-off because a March court judgment allowed these government monitoring powers to remain in effect for another year.",
+            "text": "One of the central objectives is to make federal approval processes more predictable. Large energy projects, including power plants and electricity transmission lines, often require extensive government reviews before construction can begin. Supporters argue that lengthy approval procedures can increase project costs, delay investment and make it harder to expand the country's energy infrastructure.",
             "bold": false
           }
         ]
       },
-      {
+        {
         "type": "p",
         "runs": [
           {
-            "text": "Section 702 provides broad authority to comb through overseas communications. It’s part of the Foreign Intelligence Surveillance Act, or FISA, and gives U.S. spy agencies wide latitude to collect and sift through communications of foreigners outside the U.S. without first seeking a warrant.",
+            "text": "The bill proposes tighter deadlines for federal environmental reviews and measures to accelerate the planning and construction of electricity transmission lines. It would also limit certain circumstances in which permits can be revoked or challenged in court.",
             "bold": false
           }
         ]
       },
-      {
+        {
         "type": "p",
         "runs": [
           {
-            "text": "U.S. authorities view the law as a significant national security tool that has helped thwart possible acts of terrorism, provided valuable insight into ransomware attacks on critical infrastructure and helped kill al-Qaida leader Ayman al-Zawahri in a 2022 drone strike.",
+            "text": "A significant part of the legislation addresses the growing electricity requirements of artificial intelligence data centres. As technology companies expand their computing infrastructure, demand for reliable electricity has become an increasingly important concern for policymakers and energy providers.",
             "bold": false
           }
         ]
       },
-      {
+        {
         "type": "p",
         "runs": [
           {
-            "text": "The bill was passed in 2008 in an effort to formalize major elements of a prior espionage program initiated by President George W. Bush’s Republican administration.",
+            "text": "Under the proposal, large AI data centres would be required to cover a greater share of the grid upgrade costs associated with their electricity needs. Supporters say this could help ensure that major electricity users contribute more directly to the infrastructure required to serve them.",
             "bold": false
           }
         ]
       },
-      {
+        {
         "type": "p",
         "runs": [
           {
-            "text": "Since then, officials in both main party administrations have warned that without the law, the government will be unable to acquire critical abroad intelligence.",
+            "text": "Despite bipartisan support, the legislation has faced criticism from several lawmakers. Most opposition came from Democrats who expressed concerns that the proposed changes could weaken environmental protections and tribal sovereignty. Democratic Senator Jeff Merkley argued that tribal communities had not received adequate consultation during the legislative process.",
             "bold": false
           }
         ]
       },
+      
+    
       {
         "type": "p",
         "runs": [
           {
-            "text": "Historically, renewal of the program has proved contentious The law needs to be reauthorized periodically, and this perennial requirement has led to prolonged debate in Congress even before this year, including whether more guardrails are needed to preserve the privacy of Americans and their personal data.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "That’s because when the government eavesdrops on foreigners overseas, it also intercepts the communications of Americans and anyone in the U.S. who’ve been in contact with those surveillance targets.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "Civil liberties advocates have sounded alarms about disclosures that FBI analysts have inappropriately searched the massive trove of intelligence collected through the program over the years for information about Americans, including in connection with the Jan. 6, 2021, Capitol riot by a mob of Trump supporters and the racial justice protests of 2020, as well as state and federal political figures.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "Some supporters have argued the government should be forced to get a warrant before reviewing communications acquired from Americans. U.S. officials claimed a warrant would be legally required and too cumbersome and that corrective measures have been put in place to decrease the number of inappropriate queries.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "Adding to the debate are the strange political bedfellows it has forged, uniting a coalition of lawmakers wary of government surveillance, including liberal Democrats focused on privacy and Republicans who still don’t trust the intelligence community after its probe into Russia’s ties to Trump’s 2016 Republican presidential campaign.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "This time, it’s a holdup over resistance on acting intel pick Bill Pulte Democrats objected to Trump’s choice of Bill Pulte to serve as acting director of national intelligence and refused to approve a FISA extension until the choice was rescinded. Pulte, a Trump devotee with no known national security expertise, has sounded alarms by leveraging his perch as director of the Federal Housing Finance Agency to enable bogus mortgage fraud investigations of perceived Trump foes.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "A House vote this week to temporarily expand the program failed with 19 Republicans and nearly all Democrats voting against the interim bill 198-218. The Senate likewise failed in an attempt to pass its own versions.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "Trump said after those votes that he was nominating Jay Clayton, a Manhattan U.S. attorney and former chairman of the Securities and Exchange Commission, as his permanent choice for director of national intelligence, or DNI. The choice was praised on Capitol Hill, but that wasn’t sufficient to end the deadlock before the Friday deadline for expiry.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "“I’ve known and respected” Clayton for decades and if he’d been appointed a week ago, “a lot of pain could have been avoided,” said Connecticut Rep. Jim Himes, the top Democrat on the House Intelligence Committee.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "“His intelligence, his temperament and his deep commitment to public service will make him a terrific DNI,” Himes said.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "Next Steps for the Spy Powers Provision Republican Arkansas Sen. Tom Cotton, who chairs the Senate Intelligence Committee, and Republican Iowa Sen. Chuck Grassley, who chairs the Senate Judiciary Committee, advised the Trump administration to prepare “for a potential significant gap in foreign intelligence collection.”",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "The expiration is expected to be the first substantial expiration of Section 702 since its creation more than 15 years ago. In 2024, the Senate narrowly missed its midnight deadline before voting to pass a bill that was ultimately signed into law by President Joe Biden, a Democrat, resulting in a brief hiatus.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "The gap is not expected to result in an immediate dip in intelligence collection as the U.S. hosts a number of events this summer with possible national security implications, including the World Cup and festivities celebrating the 250th birthday of the United States.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "The secretive Foreign Intelligence Surveillance Court approved the program’s renewal for another year in a March judgment, indicating Section 702’s authority is set to remain in place for months.",
-            "bold": false
-          }
-        ]
-      },
-      {
-        "type": "p",
-        "runs": [
-          {
-            "text": "Nonetheless, it is possible that a telecommunications firm or internet service provider may contest the government’s right to force it to comply with its demands for surveillance without congressional approval.",
+            "text": "The disagreement highlights the challenge of balancing infrastructure expansion with environmental safeguards and the rights of communities affected by large development projects.The Senate's approval does not mean the proposed changes have become law. The House must still consider the legislation, and its decision will determine whether the measure advances to the president.The bill could have significant implications for future energy investment, electricity transmission development and the construction of AI data centres across the United States. Its progress will remain an important issue for lawmakers, businesses, environmental groups and communities following the country's infrastructure policy.",
             "bold": false
           }
         ]
